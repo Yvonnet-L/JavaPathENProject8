@@ -8,8 +8,11 @@ import java.util.UUID;
 
 /**
  * Permits to connection between TourGuide application and microservice-RewardCentral
+ * 2 lignes Feign
+ *     - the first for a connection direct with micro-services
+ *     - Second is the configuration docker
  */
-
+//@FeignClient(name="microservice-gpsUtil", url = "localhost:9002/RewardCentral")
 @FeignClient(name="microservice-RewardCentral", url = "ms-rewardcentral:9002")
 public interface MicroserviceRewardCentralProxy {
 

@@ -11,8 +11,11 @@ import java.util.UUID;
 
 /**
  *  Permits to connection between TourGuide application and microservice-TripPricer
+ * 2 lignes Feign
+ *     - the first for a connection direct with micro-services
+ *     - Second is the configuration docker
  */
-
+//@FeignClient(name="microservice-gpsUtil", url = "localhost:9003/tripPricer")
 @FeignClient(name="microservice-TripPricer", url = "ms-trippricer:9003")
 public interface MicroserviceTripPricerProxy {
 
