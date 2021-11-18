@@ -1,80 +1,167 @@
 package tourGuide;
 
-import java.util.List;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.jsoniter.output.JsonStream;
-
-import gpsUtil.location.VisitedLocation;
+import org.springframework.web.bind.annotation.*;
+import tourGuide.beans.VisitedLocation;
+import tourGuide.dto.*;
+import tourGuide.exceptions.DataNotConformException;
 import tourGuide.service.TourGuideService;
 import tourGuide.user.User;
-import tripPricer.Provider;
+
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 public class TourGuideController {
 
 	@Autowired
 	TourGuideService tourGuideService;
-	
+
+    private Logger logger = LoggerFactory.getLogger(TourGuideController.class);
+
+    /**
+     * Home page
+     *
+     * @return String "Greetings from TourGuide!"
+     */
     @RequestMapping("/")
     public String index() {
+        logger.info(" ---> launch index - /");
         return "Greetings from TourGuide!";
     }
-    
-    @RequestMapping("/getLocation") 
-    public String getLocation(@RequestParam String userName) {
-    	VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));
-		return JsonStream.serialize(visitedLocation.location);
+
+
+    /**
+     * Return user's Location
+     *
+     * @param userName
+     * @return JsonStream.serialize(visitedLocation.location)
+     */
+    @RequestMapping("/getLocation")
+    public LocationDTO getLocation(@RequestParam String userName) {
+        logger.info(" ---> launch getLocation - /getLocation - (@RequestParam String userName)");
+        if ( userName.length() == 0){
+            throw new DataNotConformException("Username is necessary!");
+        }
+    	VisitedLocation visitedLocation = tourGuideService.getUserLocation(userName);
+		return new LocationDTO( visitedLocation.location.latitude, visitedLocation.location.longitude);
     }
-    
-    //  TODO: Change this method to no longer return a List of Attractions.
- 	//  Instead: Get the closest five tourist attractions to the user - no matter how far away they are.
- 	//  Return a new JSON object that contains:
-    	// Name of Tourist attraction, 
-        // Tourist attractions lat/long, 
-        // The user's location lat/long, 
-        // The distance in miles between the user's location and each of the attractions.
-        // The reward points for visiting each Attraction.
-        //    Note: Attraction reward points can be gathered from RewardsCentral
+
+    /**
+     * Returns a list of the 5 closest attractions, with no distance limit between them
+     *
+     * @param userName
+     * @return List<AttractionNearDTO>
+     */
     @RequestMapping("/getNearbyAttractions") 
-    public String getNearbyAttractions(@RequestParam String userName) {
-    	VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));
-    	return JsonStream.serialize(tourGuideService.getNearByAttractions(visitedLocation));
+    public List<AttractionNearDTO> getNearbyAttractions(@RequestParam String userName) {
+        logger.info(" ---> launch getNearbyAttractions - /getNearbyAttractions - (@RequestParam String userName)");
+        if ( userName.length() == 0){
+            throw new DataNotConformException("Username is necessary!");
+        }
+        return tourGuideService.getNearByAttractions(userName);
     }
-    
+
+    /**
+     * return the list of rewards for a user
+     *
+     * @param userName
+     * @return List<UserReward>
+     */
     @RequestMapping("/getRewards") 
-    public String getRewards(@RequestParam String userName) {
-    	return JsonStream.serialize(tourGuideService.getUserRewards(getUser(userName)));
+    public List<UserRewardDTO> getRewards(@RequestParam String userName) {
+        logger.info(" ---> launch getRewards - /getRewards - (@RequestParam String userName)");
+        if ( userName.length() == 0){
+            throw new DataNotConformException("Username is necessary!");
+        }
+    	return tourGuideService.getUserRewards(userName);
     }
-    
+
+    /**
+     * returns the latest locations of all users
+     *
+     * @return List<UserLocationDTO>
+     */
     @RequestMapping("/getAllCurrentLocations")
-    public String getAllCurrentLocations() {
-    	// TODO: Get a list of every user's most recent location as JSON
-    	//- Note: does not use gpsUtil to query for their current location, 
-    	//        but rather gathers the user's current location from their stored location history.
-    	//
-    	// Return object should be the just a JSON mapping of userId to Locations similar to:
-    	//     {
-    	//        "019b04a9-067a-4c76-8817-ee75088c3822": {"longitude":-48.188821,"latitude":74.84371} 
-    	//        ...
-    	//     }
-    	
-    	return JsonStream.serialize("");
+    public List<UserLocationDTO> getAllCurrentLocations() {
+        logger.info(" ---> launch  /getAllCurrentLocations");
+        List<UserLocationDTO> userLocationDTOS = tourGuideService.getAllCurrentLocations();
+        return userLocationDTOS;
     }
-    
+
+    /**
+     * returns the tripdeals of a user through a list of providers
+     *
+     * @param userName
+     * @return List<Provider> providers
+     */
     @RequestMapping("/getTripDeals")
-    public String getTripDeals(@RequestParam String userName) {
-    	List<Provider> providers = tourGuideService.getTripDeals(getUser(userName));
-    	return JsonStream.serialize(providers);
+    public List<ProviderDTO> getTripDeals(@RequestParam String userName) {
+        logger.info(" ---> launch /getTripDeals with @RequestParam String userName: " + userName);
+        if ( userName.length() == 0) {
+            throw new DataNotConformException("Username is necessary!");
+        }
+    	return tourGuideService.getTripDeals(userName);
     }
-    
-    private User getUser(String userName) {
+
+    /**
+     * returns the user found using its name
+     *
+     * @param userName
+     * @return User
+     */
+    @RequestMapping("/getUser")
+    public User getUser(@RequestParam String userName) {
+        logger.info(" ---> launch /getUser with @RequestParam String userName: " + userName);
+        if ( userName.length() == 0){
+            throw new DataNotConformException("Username is necessary!");
+        }
     	return tourGuideService.getUser(userName);
     }
-   
+
+    /**
+     * returns all users found
+     *
+     * @return List<User>
+     */
+    @RequestMapping("/getUsers")
+    public List<User> getUsers() {
+        logger.info(" ---> launch /getUsers");
+        List<User> users = tourGuideService.getAllUsers();
+        return users;
+    }
+
+    /**
+     * returns the user's preferences found using its name
+     *
+     * @param userName
+     * @return UserPreferencesDTO
+     */
+    @RequestMapping("/getUserPreferences")
+    public UserPreferencesDTO getUserPreferences(@RequestParam String userName) {
+        logger.info(" ---> launch /getUserPreferences with @RequestParam String userName: " + userName);
+        if ( userName.length() == 0){
+            throw new DataNotConformException("Username is necessary!");
+        }
+        return  tourGuideService.getUserPreferences(userName);
+    }
+
+    /**
+     * updates the preferences of the user given by name
+     *
+     * @param userName
+     * @param userPreferencesDTO
+     * @return UserPreferences
+     */
+    @PutMapping("/addUserPreferences")
+    private UserPreferencesDTO addUserPreferences(@Valid @RequestBody UserPreferencesDTO userPreferencesDTO, @RequestParam String userName ) {
+        logger.info(" ---> launch /addUserPreferences");
+        if ( userName.length() == 0){
+            throw new DataNotConformException("Username is necessary!");
+        }
+        return tourGuideService.addUserPreferences( userName, userPreferencesDTO);
+    }
 
 }

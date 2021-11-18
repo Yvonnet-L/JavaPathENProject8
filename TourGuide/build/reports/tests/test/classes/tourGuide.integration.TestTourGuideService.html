@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TestTourGuideService</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TestTourGuideService</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/tourGuide.integration.html">tourGuide.integration</a> &gt; TestTourGuideService</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">9</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">42.617s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">addUser()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">addUserPreferencesTest()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllUsers()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNearByAttractionsWithLastLocationUserIsNearDisneylandTest()</td>
+<td class="success">2.586s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNearByAttractionsWithLastLocationUserIsNearOfMcKinleyTowerTest()</td>
+<td class="success">1.824s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNearbyAttractions()</td>
+<td class="success">15.145s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getTripDeals()</td>
+<td class="success">0.050s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getUserLocation()</td>
+<td class="success">12.175s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">trackUser()</td>
+<td class="success">10.814s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2021-10-26 16:03:33.348  INFO 17244 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tourGuide.integration.TestTourGuideService], using SpringBootContextLoader
+2021-10-26 16:03:33.349  INFO 17244 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tourGuide.integration.TestTourGuideService]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-10-26 16:03:33.349  INFO 17244 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tourGuide.integration.TestTourGuideService]: TestTourGuideService does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-10-26 16:03:33.350  INFO 17244 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tourGuide.Application for test class tourGuide.integration.TestTourGuideService
+2021-10-26 16:03:33.350  INFO 17244 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-10-26 16:03:33.352  INFO 17244 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@386de000, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3288ade5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e45be4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@25acc079, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7216592c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@586350e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@20187521, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6374c653, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@236b2c28, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1771530e]
+2021-10-26 16:03:33.353  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:33.402  INFO 17244 --- [    Test worker] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:33.449  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:33.534  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:33.586  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:33.687  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:33.777  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:33.876  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:33.931  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+2021-10-26 16:03:34.024  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:34.129  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+2021-10-26 16:03:34.196  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:34.223 DEBUG 17244 --- [pool-6-thread-1] tourGuide.tracker.Tracker                : Tracker Time Elapsed: 1 seconds.
+2021-10-26 16:03:34.224 DEBUG 17244 --- [pool-6-thread-1] tourGuide.tracker.Tracker                : Tracker sleeping
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:03:44.746  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:03:45.532  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       : TestMode enabled
+2021-10-26 16:03:45.532 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Initializing users
+-TourGuideService-  VisitedLocations: 8970677c-e6d0-4a58-ae95-a949034c254e - -43.31743380612858 - -141.34029372073834 - Thu Oct 07 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 8970677c-e6d0-4a58-ae95-a949034c254e - -8.821887901136478 - 14.138272832629553 - Sun Oct 24 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 8970677c-e6d0-4a58-ae95-a949034c254e - 43.650912213969264 - -89.88730711956184 - Thu Oct 07 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 8fab087c-0530-4192-a0be-64349d3c6892 - -39.714691129035835 - -60.53801540127105 - Tue Oct 05 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 8fab087c-0530-4192-a0be-64349d3c6892 - 28.107022512612275 - -108.26132232049802 - Thu Oct 07 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 8fab087c-0530-4192-a0be-64349d3c6892 - 42.88071602622779 - -88.42559193242147 - Thu Oct 21 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 625de93e-99dc-4411-8a0f-47defd3c1e19 - -69.09552004655173 - 49.59416547871993 - Tue Oct 12 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 625de93e-99dc-4411-8a0f-47defd3c1e19 - 0.6361054314319432 - -72.47386180399597 - Fri Oct 08 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 625de93e-99dc-4411-8a0f-47defd3c1e19 - 5.623650909785624 - -13.337404300041726 - Thu Oct 21 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 261020fc-d7f3-4a0c-b515-bc7dce7a16ec - -21.269859891833164 - 62.87814249297375 - Wed Oct 06 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 261020fc-d7f3-4a0c-b515-bc7dce7a16ec - 62.91099404868484 - -86.73670252746308 - Sun Oct 24 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 261020fc-d7f3-4a0c-b515-bc7dce7a16ec - -8.143015676804765 - 120.62141941406833 - Tue Oct 12 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 326b175c-f4b5-463b-96fd-d1abf00c5b43 - -16.462334416892432 - -50.66761048726619 - Mon Oct 18 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 326b175c-f4b5-463b-96fd-d1abf00c5b43 - 22.315857212843014 - 143.48772074722893 - Tue Sep 28 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 326b175c-f4b5-463b-96fd-d1abf00c5b43 - -64.30466648745825 - 94.85257150786828 - Thu Oct 07 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: c3a1da8e-0680-4227-b425-8dd67cf953c6 - -56.6339246691409 - 162.0026533344589 - Sat Oct 02 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: c3a1da8e-0680-4227-b425-8dd67cf953c6 - 72.57763445379035 - 24.87109951724139 - Tue Oct 19 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: c3a1da8e-0680-4227-b425-8dd67cf953c6 - 76.50624339081395 - 47.05060156712608 - Sat Oct 09 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 8d09c763-cadd-482d-af5b-237a4290b963 - 10.509739663995248 - -153.84825438061975 - Wed Oct 20 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 8d09c763-cadd-482d-af5b-237a4290b963 - -4.914395377592157 - -101.02306943176129 - Mon Sep 27 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 8d09c763-cadd-482d-af5b-237a4290b963 - -77.35336688843971 - -59.98028972848654 - Fri Oct 15 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: fdc30ffe-4558-4168-a675-00d4ca181464 - -56.55065380457876 - -3.311027966556992 - Tue Oct 05 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: fdc30ffe-4558-4168-a675-00d4ca181464 - 29.72487430791672 - 52.8728293118144 - Thu Oct 07 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: fdc30ffe-4558-4168-a675-00d4ca181464 - 66.63198191773299 - 6.2441333743185226 - Sun Oct 03 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: bdc8152d-18e1-46a1-a09b-3112b2c333e4 - -45.538137830839865 - 81.27280655529353 - Mon Oct 18 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: bdc8152d-18e1-46a1-a09b-3112b2c333e4 - 60.046226423950145 - -32.984735365098004 - Wed Oct 20 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: bdc8152d-18e1-46a1-a09b-3112b2c333e4 - 74.13149931180732 - -40.82998410589258 - Thu Oct 14 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: ad476fc0-6fd1-42c8-8d79-9e3b59592197 - -0.27694109918938636 - 74.47168950407135 - Sun Oct 17 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: ad476fc0-6fd1-42c8-8d79-9e3b59592197 - -57.97293451737081 - -20.956690981784106 - Wed Oct 06 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: ad476fc0-6fd1-42c8-8d79-9e3b59592197 - -78.84115774692204 - 80.10436448175716 - Sun Oct 24 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 16b82955-5596-4ccb-adf4-2e8467b9089a - -52.81875583219473 - -46.00712707036075 - Thu Oct 21 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 16b82955-5596-4ccb-adf4-2e8467b9089a - 52.55498149583761 - 149.9159146504211 - Mon Oct 25 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 16b82955-5596-4ccb-adf4-2e8467b9089a - 17.87592200834999 - 19.962848250031982 - Wed Oct 20 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 3bf12fb6-f716-4b1a-bab6-7b9f1c13d870 - -14.606137437823165 - -117.20375243627748 - Tue Oct 05 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 3bf12fb6-f716-4b1a-bab6-7b9f1c13d870 - 51.16153700152606 - -48.30921632347244 - Mon Sep 27 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 3bf12fb6-f716-4b1a-bab6-7b9f1c13d870 - -59.72811526654667 - -22.670260753104316 - Thu Oct 21 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 00739d3b-cc11-4b0b-8918-68f1ff64d2b9 - 75.8763022153972 - 78.81702867929567 - Tue Oct 19 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 00739d3b-cc11-4b0b-8918-68f1ff64d2b9 - -19.520458404629025 - -119.22415289313469 - Tue Oct 12 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 00739d3b-cc11-4b0b-8918-68f1ff64d2b9 - 20.58140911520853 - -170.9663641215267 - Sat Oct 09 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: a121080b-1a54-471f-8ade-488723d4bf1d - 69.54670004461215 - -88.29952242363429 - Tue Sep 28 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: a121080b-1a54-471f-8ade-488723d4bf1d - -22.521179056009863 - 15.444848631096818 - Mon Oct 25 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: a121080b-1a54-471f-8ade-488723d4bf1d - 32.07957992915851 - 12.433136155464695 - Thu Oct 21 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 06fbb8fa-23bc-4893-9d7e-e4864496a3b8 - 47.817257464123 - 129.35692085139016 - Fri Oct 15 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 06fbb8fa-23bc-4893-9d7e-e4864496a3b8 - -59.976674696400806 - 116.71062706809681 - Sat Oct 02 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 06fbb8fa-23bc-4893-9d7e-e4864496a3b8 - -76.91450706004437 - 58.104518180538264 - Wed Sep 29 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: afa1e99a-2982-46fc-b533-9b967cd55e51 - -49.25222230746703 - 38.02781617841782 - Thu Sep 30 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: afa1e99a-2982-46fc-b533-9b967cd55e51 - -54.91696125391903 - -86.99397091358877 - Fri Oct 22 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: afa1e99a-2982-46fc-b533-9b967cd55e51 - -24.245699977412137 - 5.606779922683387 - Tue Oct 26 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: e58f030c-d7c3-4cd9-b8b9-7e0ea094c19f - 78.28002821325373 - 18.196074403167216 - Thu Sep 30 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: e58f030c-d7c3-4cd9-b8b9-7e0ea094c19f - -75.8691615564279 - -172.78083353350553 - Tue Oct 12 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: e58f030c-d7c3-4cd9-b8b9-7e0ea094c19f - -83.89279419248116 - -169.28018697084892 - Tue Oct 26 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: fb2aa9e2-796b-4c5c-8c76-30fe6cc83b65 - 4.21974446048668 - 1.1184506354203165 - Thu Sep 30 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: fb2aa9e2-796b-4c5c-8c76-30fe6cc83b65 - -71.54168667108843 - 30.942436012983876 - Sun Oct 10 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: fb2aa9e2-796b-4c5c-8c76-30fe6cc83b65 - -84.37371655967723 - 125.8142230605938 - Wed Oct 13 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 3fcf898c-b348-4599-9ce9-cf29d75d12e8 - 2.2366285694290866 - -42.50234804138546 - Sun Oct 17 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 3fcf898c-b348-4599-9ce9-cf29d75d12e8 - -77.98729660047705 - -16.517754045830742 - Mon Sep 27 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 3fcf898c-b348-4599-9ce9-cf29d75d12e8 - 72.78300510851531 - 100.28936910203322 - Sat Oct 16 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 51508257-a6e2-4f52-95c7-1210046de23c - 75.19352920244813 - -1.0318788593640136 - Tue Oct 19 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 51508257-a6e2-4f52-95c7-1210046de23c - -4.565760732854216 - 47.22665830264998 - Sun Oct 17 18:03:45 CEST 2021
+-TourGuideService-  VisitedLocations: 51508257-a6e2-4f52-95c7-1210046de23c - 31.836486135236058 - -58.61434552469112 - Sat Oct 09 18:03:45 CEST 2021
+2021-10-26 16:03:45.536 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Created 20 internal test users.
+2021-10-26 16:03:45.536 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Finished initializing users
+2021-10-26 16:03:45.536  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = jon
+2021-10-26 16:03:45.536  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = jon2
+2021-10-26 16:03:45.536 DEBUG 17244 --- [pool-8-thread-1] tourGuide.tracker.Tracker                : Begin Tracker. Tracking 22 users.
+2021-10-26 16:03:45.542  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser10
+2021-10-26 16:03:45.542  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser10
+2021-10-26 16:03:45.542  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser10
+**-----&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;34.1 - -118.1
+**-----&gt;&gt;&gt;&gt;&gt; distance 22.002871411832743 id 0
+**-----&gt;&gt;&gt;&gt;&gt; distance 762.0959304598052 id 1
+**-----&gt;&gt;&gt;&gt;&gt; distance 163.7730169961344 id 2
+**-----&gt;&gt;&gt;&gt;&gt; distance 126.8044875204365 id 3
+**-----&gt;&gt;&gt;&gt;&gt; distance 1434.47002809036 id 4
+**-----&gt;&gt;&gt;&gt;&gt; distance 1425.7209741657648 id 5
+**-----&gt;&gt;&gt;&gt;&gt; distance 475.3288141701004 id 6
+**-----&gt;&gt;&gt;&gt;&gt; distance 1994.7747976038333 id 7
+**-----&gt;&gt;&gt;&gt;&gt; distance 1911.0612246713554 id 8
+**-----&gt;&gt;&gt;&gt;&gt; distance 2338.643900800146 id 9
+**-----&gt;&gt;&gt;&gt;&gt; distance 2435.7865164044174 id 10
+**-----&gt;&gt;&gt;&gt;&gt; distance 2150.392302697191 id 11
+**-----&gt;&gt;&gt;&gt;&gt; distance 2285.397291701089 id 12
+**-----&gt;&gt;&gt;&gt;&gt; distance 2300.262280626671 id 13
+**-----&gt;&gt;&gt;&gt;&gt; distance 1216.7135462802569 id 14
+**-----&gt;&gt;&gt;&gt;&gt; distance 1750.342080214757 id 15
+**-----&gt;&gt;&gt;&gt;&gt; distance 1587.438873788864 id 16
+**-----&gt;&gt;&gt;&gt;&gt; distance 1926.6805694436268 id 17
+**-----&gt;&gt;&gt;&gt;&gt; distance 1289.282304876302 id 18
+**-----&gt;&gt;&gt;&gt;&gt; distance 109.00444424117003 id 19
+**-----&gt;&gt;&gt;&gt;&gt; distance 2137.8836296277454 id 20
+**-----&gt;&gt;&gt;&gt;&gt; distance 2579.1139803187357 id 21
+**-----&gt;&gt;&gt;&gt;&gt; distance 693.8909067578852 id 22
+**-----&gt;&gt;&gt;&gt;&gt; distance 1346.306871645333 id 23
+**-----&gt;&gt;&gt;&gt;&gt; distance 2441.391945434386 id 24
+**-----&gt;&gt;&gt;&gt;&gt; distance 2179.0437143661434 id 25
+2021-10-26 16:03:45.594  INFO 17244 --- [pool-8-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+2021-10-26 16:03:48.130  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser10
+2021-10-26 16:03:48.131  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---&gt; Launch buildUserPreferences
+2021-10-26 16:03:48.131  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser10
+2021-10-26 16:03:48.131  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---&gt; Launch buildUserPreferencesDTO
+2021-10-26 16:03:48.131  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser10
+2021-10-26 16:03:48.137  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = jon
+2021-10-26 16:03:48.182  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---&gt; Launch buildProviderDTO
+2021-10-26 16:03:48.183  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---&gt; Launch buildProviderDTO
+2021-10-26 16:03:48.183  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---&gt; Launch buildProviderDTO
+2021-10-26 16:03:48.183  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---&gt; Launch buildProviderDTO
+2021-10-26 16:03:48.183  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---&gt; Launch buildProviderDTO
+2021-10-26 16:03:48.187  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       : TestMode enabled
+2021-10-26 16:03:48.187 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Initializing users
+-TourGuideService-  VisitedLocations: c8a8017f-fca0-40ca-a3a8-9f4440ae8d2a - -82.57150081470152 - -139.50648301619134 - Thu Oct 14 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c8a8017f-fca0-40ca-a3a8-9f4440ae8d2a - 18.30355468883357 - 98.18661677529622 - Wed Sep 29 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c8a8017f-fca0-40ca-a3a8-9f4440ae8d2a - 8.53135096799123 - -27.40767439063032 - Sat Oct 09 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: aecf929c-0fe0-4256-9612-c20cf95187e0 - -28.91001283076416 - 21.009782146199342 - Fri Oct 22 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: aecf929c-0fe0-4256-9612-c20cf95187e0 - 62.38591292195099 - 0.7832814059984798 - Sat Oct 16 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: aecf929c-0fe0-4256-9612-c20cf95187e0 - 35.359441941113644 - -133.7660925016906 - Tue Sep 28 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a1ed1239-e127-4293-a478-563011f32edc - -17.16026016020365 - -44.26755415163106 - Sun Oct 17 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a1ed1239-e127-4293-a478-563011f32edc - 60.16889282587721 - -135.45619154694558 - Tue Oct 26 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a1ed1239-e127-4293-a478-563011f32edc - -73.36875192904296 - -93.56564212671593 - Wed Oct 20 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c5d15b46-f8f0-433f-bafa-30759f40fe62 - -31.846069806066808 - -166.18916429128194 - Tue Sep 28 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c5d15b46-f8f0-433f-bafa-30759f40fe62 - 66.33814464210886 - 6.737657252361345 - Sun Oct 10 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c5d15b46-f8f0-433f-bafa-30759f40fe62 - -6.559897027733001 - 58.70229462331338 - Sat Oct 23 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: f767cd7a-efa5-462c-8b07-a609f6b2ece2 - -17.6761021626334 - -31.707966748082782 - Tue Sep 28 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: f767cd7a-efa5-462c-8b07-a609f6b2ece2 - 82.23313177829834 - -52.50454422300953 - Sun Oct 03 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: f767cd7a-efa5-462c-8b07-a609f6b2ece2 - -43.82994153907108 - 105.22861250551875 - Tue Sep 28 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: dbf76900-501b-4ddb-8256-ef8068c7c9a8 - 9.101012560059303 - -19.923185600984283 - Mon Sep 27 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: dbf76900-501b-4ddb-8256-ef8068c7c9a8 - 22.847391701116848 - -33.427852258548654 - Sat Oct 02 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: dbf76900-501b-4ddb-8256-ef8068c7c9a8 - -70.36904677535887 - -83.26398009065211 - Mon Oct 11 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9394a024-2a1d-45f4-9e29-a3bcc7b3b513 - -43.52713431108073 - 107.2090841259818 - Fri Oct 01 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9394a024-2a1d-45f4-9e29-a3bcc7b3b513 - -46.15041136801853 - -41.04164638928563 - Sat Oct 02 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9394a024-2a1d-45f4-9e29-a3bcc7b3b513 - -55.004136167897414 - 139.34980004357305 - Mon Oct 25 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d5002040-257e-4f6f-ba70-12f052627366 - 34.23118421729225 - -178.19473807767898 - Mon Oct 11 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d5002040-257e-4f6f-ba70-12f052627366 - -67.04395936387584 - -6.7400090181096175 - Fri Oct 01 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d5002040-257e-4f6f-ba70-12f052627366 - 57.560453477916525 - 21.19399667269701 - Mon Oct 11 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 96c81f9b-f254-4e38-ad57-433c6a96ffaa - -34.504887905152835 - 101.5762511918802 - Sun Oct 03 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 96c81f9b-f254-4e38-ad57-433c6a96ffaa - 49.922691210537266 - -92.28727168046572 - Thu Oct 07 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 96c81f9b-f254-4e38-ad57-433c6a96ffaa - -76.37864576656067 - -30.32897992258549 - Wed Oct 06 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 12e2c555-fbaf-49bc-9b69-c1fa2b4dd058 - 31.172119095128636 - -170.29182317339692 - Thu Sep 30 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 12e2c555-fbaf-49bc-9b69-c1fa2b4dd058 - -45.49092943468637 - -53.187824866027114 - Sun Oct 17 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 12e2c555-fbaf-49bc-9b69-c1fa2b4dd058 - 65.63234240966344 - 65.71750274353636 - Sun Oct 24 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 19bbd4c0-d800-493e-a28f-cc76535cf8bc - 23.274025483143575 - -53.83580232239373 - Mon Oct 18 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 19bbd4c0-d800-493e-a28f-cc76535cf8bc - 71.37327637678379 - -159.99729660354654 - Thu Oct 21 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 19bbd4c0-d800-493e-a28f-cc76535cf8bc - -30.518656276378735 - 89.51496389237678 - Tue Oct 19 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d4fbd5ba-ef42-46d6-8393-e503b8d5fbe9 - 41.58692973882593 - -51.525764515531534 - Sun Oct 24 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d4fbd5ba-ef42-46d6-8393-e503b8d5fbe9 - -48.5454809408443 - -24.837249114251023 - Wed Sep 29 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d4fbd5ba-ef42-46d6-8393-e503b8d5fbe9 - -16.854876683460773 - -23.92638368657805 - Wed Oct 06 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 66d7f977-c470-42c6-bafb-1f9d6dd16ffb - -78.33662174364989 - -20.252215397987015 - Tue Oct 26 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 66d7f977-c470-42c6-bafb-1f9d6dd16ffb - -1.8580597358607065 - -15.039869390598227 - Mon Oct 18 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 66d7f977-c470-42c6-bafb-1f9d6dd16ffb - -80.83967686593998 - -45.638264620633635 - Mon Oct 25 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 0edc9f25-9f53-4ad2-bb5b-49fd31f4d14a - -67.42935065132966 - 33.37693090537613 - Thu Sep 30 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 0edc9f25-9f53-4ad2-bb5b-49fd31f4d14a - -59.127472818682094 - 79.10121654685514 - Thu Sep 30 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 0edc9f25-9f53-4ad2-bb5b-49fd31f4d14a - 2.146213809571833 - 127.56572993928688 - Tue Oct 26 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 8f183f07-2e72-4296-b188-efe124fb7e15 - 46.27880039752168 - 10.98641383975746 - Wed Sep 29 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 8f183f07-2e72-4296-b188-efe124fb7e15 - 60.33030368866653 - 82.32704547636496 - Mon Oct 25 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 8f183f07-2e72-4296-b188-efe124fb7e15 - 51.711677875004455 - 132.40487204598742 - Sat Oct 16 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 2e374cf2-2187-4145-bc66-2e4b5ad452da - -66.03756411322323 - 46.166614417434346 - Mon Oct 18 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 2e374cf2-2187-4145-bc66-2e4b5ad452da - 46.31127616510409 - -171.71874957053205 - Fri Oct 15 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 2e374cf2-2187-4145-bc66-2e4b5ad452da - -58.88352266029848 - 76.45426799110157 - Tue Oct 26 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: dac2a03d-2dae-4411-a295-3fc33fc72c25 - 54.80425565255592 - 26.01482949652251 - Thu Oct 14 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: dac2a03d-2dae-4411-a295-3fc33fc72c25 - 5.9663059415603215 - 106.34516585601995 - Wed Oct 13 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: dac2a03d-2dae-4411-a295-3fc33fc72c25 - 36.25919666571964 - 64.31248105938135 - Sat Oct 23 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: e2e48a62-23ba-4813-a9dc-5e02c5e5087e - 18.397144674931397 - -13.733541236556363 - Sat Oct 02 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: e2e48a62-23ba-4813-a9dc-5e02c5e5087e - 31.995097208083735 - 67.69849829258146 - Wed Sep 29 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: e2e48a62-23ba-4813-a9dc-5e02c5e5087e - -15.909614972579277 - 9.058364512759482 - Fri Oct 01 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9d91138d-e96b-4403-b1dd-2ec7f7c943d8 - 61.36612199704123 - 155.16497444625384 - Sat Oct 16 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9d91138d-e96b-4403-b1dd-2ec7f7c943d8 - 1.3019178996518264 - -38.72404832953302 - Thu Oct 21 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9d91138d-e96b-4403-b1dd-2ec7f7c943d8 - -5.350737123008386 - -124.21115707135075 - Tue Oct 19 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a938e3db-40bc-4651-8028-601aac72b05a - -28.84356706011929 - 118.30948820333185 - Mon Oct 04 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a938e3db-40bc-4651-8028-601aac72b05a - 68.39125137369197 - 17.244988605129294 - Mon Oct 04 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a938e3db-40bc-4651-8028-601aac72b05a - -58.42295001900542 - -16.40180411600008 - Thu Sep 30 18:03:48 CEST 2021
+2021-10-26 16:03:48.191 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Created 20 internal test users.
+2021-10-26 16:03:48.191 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Finished initializing users
+2021-10-26 16:03:48.192 DEBUG 17244 --- [ool-11-thread-1] tourGuide.tracker.Tracker                : Begin Tracker. Tracking 22 users.
+2021-10-26 16:03:48.196  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       : TestMode enabled
+2021-10-26 16:03:48.197 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Initializing users
+-TourGuideService-  VisitedLocations: 1bffa425-915e-490c-8939-33aea8dfe333 - -5.886113610316272 - -121.61178178158305 - Fri Oct 08 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 1bffa425-915e-490c-8939-33aea8dfe333 - -45.71956065348051 - 167.42573543574764 - Wed Oct 06 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 1bffa425-915e-490c-8939-33aea8dfe333 - -48.88836332194722 - 159.367818405175 - Sat Oct 23 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d2569b40-a450-4998-97c7-c474c4a12cc2 - -27.007632798818598 - -73.2012200240111 - Mon Oct 11 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d2569b40-a450-4998-97c7-c474c4a12cc2 - -63.019742643463616 - -167.47640132465963 - Thu Oct 21 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: d2569b40-a450-4998-97c7-c474c4a12cc2 - 41.137317456778746 - -175.7838976757402 - Tue Oct 19 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 2317a6c6-d96e-472d-99fe-945f42a5a69e - -76.15907671967351 - 97.27442081336926 - Sat Oct 16 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 2317a6c6-d96e-472d-99fe-945f42a5a69e - -30.22079602358631 - 147.2802304607839 - Tue Oct 26 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 2317a6c6-d96e-472d-99fe-945f42a5a69e - -59.17001423819478 - 19.3805377749122 - Mon Oct 04 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 6841a719-5f4d-4df1-960c-9316365a4cda - -51.377929968208996 - 125.16463537785376 - Thu Sep 30 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 6841a719-5f4d-4df1-960c-9316365a4cda - -72.95505898070539 - -20.20903345158831 - Mon Sep 27 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 6841a719-5f4d-4df1-960c-9316365a4cda - -22.288519344764673 - -70.2008249319076 - Mon Oct 11 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: b73c04f1-6c03-4df2-9b2c-ce774846d688 - -6.231007441881516 - 121.34815574390382 - Fri Oct 08 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: b73c04f1-6c03-4df2-9b2c-ce774846d688 - 73.97252484433119 - -81.66106050923922 - Sat Oct 23 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: b73c04f1-6c03-4df2-9b2c-ce774846d688 - 53.25367068194427 - -14.614774806713996 - Sat Oct 09 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: b4581302-a6f7-4e91-b5ff-7d36cda55e69 - -39.313670852977786 - 151.846667356279 - Mon Oct 04 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: b4581302-a6f7-4e91-b5ff-7d36cda55e69 - 52.64636667772879 - 158.60742801365643 - Thu Oct 07 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: b4581302-a6f7-4e91-b5ff-7d36cda55e69 - -29.52907798962032 - -14.478339417053945 - Fri Oct 22 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 66e45b27-beeb-4bdb-9f27-a693f813d44c - 84.76324566989882 - -56.33715126285912 - Sat Oct 02 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 66e45b27-beeb-4bdb-9f27-a693f813d44c - 75.12541230475631 - -171.86362670981285 - Mon Oct 11 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 66e45b27-beeb-4bdb-9f27-a693f813d44c - 64.90304911414151 - -16.740466115191026 - Tue Oct 19 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 602a3f0c-dab5-41b5-b4c3-c8a912756711 - -24.500557279956354 - 160.96480295922032 - Sun Oct 10 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 602a3f0c-dab5-41b5-b4c3-c8a912756711 - 1.1689141245571903 - 158.25512210416537 - Thu Oct 07 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 602a3f0c-dab5-41b5-b4c3-c8a912756711 - -55.94698231366308 - -93.26978332202432 - Sat Oct 16 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 7d221db8-93f0-48a5-bcfb-7017a754a407 - -79.67733348574131 - 171.27321890513326 - Fri Oct 15 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 7d221db8-93f0-48a5-bcfb-7017a754a407 - 50.70026503685156 - 145.0905960160784 - Tue Sep 28 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 7d221db8-93f0-48a5-bcfb-7017a754a407 - -26.043967139985604 - 65.17680428473918 - Tue Oct 19 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9917b61c-cdc9-4893-ab90-ceab1d23fd1d - -8.247995935136117 - -41.49412238452982 - Sun Oct 10 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9917b61c-cdc9-4893-ab90-ceab1d23fd1d - -24.038705001443248 - 133.58501000547295 - Sat Oct 16 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 9917b61c-cdc9-4893-ab90-ceab1d23fd1d - 53.74301337510161 - 27.602924382184767 - Mon Sep 27 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 5bd3cf72-52af-420b-8789-93f62f6f0a4f - 72.14734888534562 - 96.3094628577229 - Mon Oct 04 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 5bd3cf72-52af-420b-8789-93f62f6f0a4f - -55.18651435979579 - 4.228295978236758 - Tue Oct 05 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 5bd3cf72-52af-420b-8789-93f62f6f0a4f - -8.943284289523561 - 123.99983946583023 - Tue Oct 26 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 984a2c55-2f30-4913-b3e7-ebc4f5fc64ef - 25.380342043447143 - 14.877775864776453 - Fri Oct 15 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 984a2c55-2f30-4913-b3e7-ebc4f5fc64ef - 28.71479098955696 - -116.11855217618385 - Fri Oct 01 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 984a2c55-2f30-4913-b3e7-ebc4f5fc64ef - -19.80798319050473 - -41.05378628815947 - Mon Oct 25 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: cfab0a10-ba96-4940-9658-0de1f0162b6d - -7.960687486297687 - 70.67424285756331 - Tue Oct 12 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: cfab0a10-ba96-4940-9658-0de1f0162b6d - -80.22171595393363 - 147.83231431528947 - Sun Oct 17 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: cfab0a10-ba96-4940-9658-0de1f0162b6d - 0.05770597391186527 - 140.6149700872718 - Sun Oct 17 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 924e6f61-f267-4aaf-91b9-2e404be1c11c - -33.781686941036604 - -143.92485690079886 - Wed Sep 29 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 924e6f61-f267-4aaf-91b9-2e404be1c11c - 69.50091448276672 - 84.38179478266778 - Sun Oct 10 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 924e6f61-f267-4aaf-91b9-2e404be1c11c - 8.259981456947784 - 165.64018515650747 - Sun Oct 03 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c8f46239-477b-411b-bd1f-8c85403f75a2 - -46.68578822339253 - -29.29646111918271 - Thu Oct 14 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c8f46239-477b-411b-bd1f-8c85403f75a2 - -56.96832643057347 - 23.779601542902867 - Wed Oct 13 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c8f46239-477b-411b-bd1f-8c85403f75a2 - 39.92369125381359 - 27.89614921555446 - Thu Oct 21 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 273c560f-feb8-46b4-979f-40c925f067e7 - 0.1820702691305769 - -175.33700261382398 - Fri Oct 15 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 273c560f-feb8-46b4-979f-40c925f067e7 - 57.95699591274095 - -62.02785392960023 - Sun Oct 17 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 273c560f-feb8-46b4-979f-40c925f067e7 - -45.347304187405925 - -51.807262024196405 - Wed Oct 13 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 25e7c8c8-3849-4c56-8a1c-1aaabc434d36 - -52.701620424467144 - -23.916028227341656 - Tue Sep 28 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 25e7c8c8-3849-4c56-8a1c-1aaabc434d36 - -7.909453356411888 - -164.3442469172718 - Tue Oct 19 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 25e7c8c8-3849-4c56-8a1c-1aaabc434d36 - 27.00495407541635 - 172.53847408514724 - Wed Sep 29 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 5de3814b-f6ef-4138-bbed-c48037953ae5 - -61.66959175648442 - 84.26391117141372 - Mon Sep 27 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 5de3814b-f6ef-4138-bbed-c48037953ae5 - -61.42212101199526 - -62.93490554433981 - Fri Oct 15 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: 5de3814b-f6ef-4138-bbed-c48037953ae5 - 79.78002036802033 - 135.27312257625465 - Sun Oct 10 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a4933228-3862-4c29-b578-68a7278b9033 - 31.589383619084842 - 109.76289846796368 - Wed Oct 20 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a4933228-3862-4c29-b578-68a7278b9033 - -69.25170638250097 - -96.86198407976593 - Thu Oct 14 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: a4933228-3862-4c29-b578-68a7278b9033 - 53.15881702894342 - -146.91000801320027 - Thu Oct 07 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c9c0dd5e-5ca0-4bdf-a9a1-243e01f43252 - -76.24148901119112 - -63.59441127832355 - Sat Oct 09 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c9c0dd5e-5ca0-4bdf-a9a1-243e01f43252 - -76.278253255495 - 137.73190847487137 - Wed Oct 13 18:03:48 CEST 2021
+-TourGuideService-  VisitedLocations: c9c0dd5e-5ca0-4bdf-a9a1-243e01f43252 - 36.65198479636808 - 54.72560156604638 - Sat Oct 09 18:03:48 CEST 2021
+2021-10-26 16:03:48.201 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Created 20 internal test users.
+2021-10-26 16:03:48.201 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Finished initializing users
+2021-10-26 16:03:48.201 DEBUG 17244 --- [ool-13-thread-1] tourGuide.tracker.Tracker                : Begin Tracker. Tracking 20 users.
+2021-10-26 16:03:48.261  INFO 17244 --- [ool-11-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:48.291  INFO 17244 --- [ool-13-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+2021-10-26 16:03:48.294  INFO 17244 --- [    Test worker] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:03:56.228  INFO 17244 --- [pool-8-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+2021-10-26 16:03:58.706  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:03:59.094  INFO 17244 --- [    Test worker] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:03:59.912  INFO 17244 --- [ool-11-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+2021-10-26 16:04:03.670  INFO 17244 --- [ool-13-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:04:08.500  INFO 17244 --- [pool-8-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:04:10.682  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:04:12.506  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = lolo
+2021-10-26 16:04:12.507  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = lolo
+**-----&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;-63.715994 - 13.57218
+**-----&gt;&gt;&gt;&gt;&gt; distance 9526.179892661608 id 0
+**-----&gt;&gt;&gt;&gt;&gt; distance 9878.205454856736 id 1
+**-----&gt;&gt;&gt;&gt;&gt; distance 9535.744490793759 id 2
+**-----&gt;&gt;&gt;&gt;&gt; distance 9472.157710945077 id 3
+**-----&gt;&gt;&gt;&gt;&gt; distance 8898.166260184998 id 4
+**-----&gt;&gt;&gt;&gt;&gt; distance 8821.856944687008 id 5
+**-----&gt;&gt;&gt;&gt;&gt; distance 9188.110694819437 id 6
+**-----&gt;&gt;&gt;&gt;&gt; distance 8814.385038360915 id 7
+**-----&gt;&gt;&gt;&gt;&gt; distance 8701.99368672267 id 8
+**-----&gt;&gt;&gt;&gt;&gt; distance 11874.606136060533 id 9
+**-----&gt;&gt;&gt;&gt;&gt; distance 8617.901000150532 id 10
+**-----&gt;&gt;&gt;&gt;&gt; distance 8726.532027950998 id 11
+**-----&gt;&gt;&gt;&gt;&gt; distance 8596.687827112653 id 12
+**-----&gt;&gt;&gt;&gt;&gt; distance 7976.782941267938 id 13
+**-----&gt;&gt;&gt;&gt;&gt; distance 8716.019032358188 id 14
+**-----&gt;&gt;&gt;&gt;&gt; distance 8577.797104880006 id 15
+**-----&gt;&gt;&gt;&gt;&gt; distance 8523.526691882087 id 16
+**-----&gt;&gt;&gt;&gt;&gt; distance 8629.099030155085 id 17
+**-----&gt;&gt;&gt;&gt;&gt; distance 8692.87104529612 id 18
+**-----&gt;&gt;&gt;&gt;&gt; distance 9439.169389914252 id 19
+**-----&gt;&gt;&gt;&gt;&gt; distance 8115.256523103937 id 20
+**-----&gt;&gt;&gt;&gt;&gt; distance 8627.935723473405 id 21
+**-----&gt;&gt;&gt;&gt;&gt; distance 9067.92892286905 id 22
+**-----&gt;&gt;&gt;&gt;&gt; distance 9125.525327003306 id 23
+**-----&gt;&gt;&gt;&gt;&gt; distance 8621.113460196018 id 24
+**-----&gt;&gt;&gt;&gt;&gt; distance 8112.771120983268 id 25
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:04:13.555  INFO 17244 --- [ool-11-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Legend Valley
+2021-10-26 16:04:14.158  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser11
+2021-10-26 16:04:14.158  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser11
+2021-10-26 16:04:14.158  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---&gt; Launch getUser(String userName) with userName = internalUser11
+**-----&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;61.1 - -150.1
+**-----&gt;&gt;&gt;&gt;&gt; distance 2361.374968104428 id 0
+**-----&gt;&gt;&gt;&gt;&gt; distance 2003.0259684302957 id 1
+**-----&gt;&gt;&gt;&gt;&gt; distance 2346.031132397722 id 2
+**-----&gt;&gt;&gt;&gt;&gt; distance 2411.4991612046138 id 3
+**-----&gt;&gt;&gt;&gt;&gt; distance 3003.2337162809454 id 4
+**-----&gt;&gt;&gt;&gt;&gt; distance 3075.8619678723903 id 5
+**-----&gt;&gt;&gt;&gt;&gt; distance 2690.780322788966 id 6
+**-----&gt;&gt;&gt;&gt;&gt; distance 3131.9188597744787 id 7
+**-----&gt;&gt;&gt;&gt;&gt; distance 3228.758516941148 id 8
+**-----&gt;&gt;&gt;&gt;&gt; distance 11.058954440370245 id 9
+**-----&gt;&gt;&gt;&gt;&gt; distance 3366.455728817822 id 10
+**-----&gt;&gt;&gt;&gt;&gt; distance 3231.192316196804 id 11
+**-----&gt;&gt;&gt;&gt;&gt; distance 3367.2945773417614 id 12
+**-----&gt;&gt;&gt;&gt;&gt; distance 3941.0193777177656 id 13
+**-----&gt;&gt;&gt;&gt;&gt; distance 3167.1000154385915 id 14
+**-----&gt;&gt;&gt;&gt;&gt; distance 3331.4858998808154 id 15
+**-----&gt;&gt;&gt;&gt;&gt; distance 3371.2330996598134 id 16
+**-----&gt;&gt;&gt;&gt;&gt; distance 3298.650972698331 id 17
+**-----&gt;&gt;&gt;&gt;&gt; distance 3192.5486359339548 id 18
+**-----&gt;&gt;&gt;&gt;&gt; distance 2448.2237495051327 id 19
+**-----&gt;&gt;&gt;&gt;&gt; distance 3797.674765485374 id 20
+**-----&gt;&gt;&gt;&gt;&gt; distance 3376.5262405688736 id 21
+**-----&gt;&gt;&gt;&gt;&gt; distance 2809.7948549003368 id 22
+**-----&gt;&gt;&gt;&gt;&gt; distance 2778.3189326483207 id 23
+**-----&gt;&gt;&gt;&gt;&gt; distance 3364.2351603203992 id 24
+**-----&gt;&gt;&gt;&gt;&gt; distance 3803.7276281340364 id 25
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Cinderella Castle
+2021-10-26 16:04:15.412  INFO 17244 --- [ool-13-thread-1] tourGuide.service.RewardsService         :  ----&gt; Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -&gt; on ajoute le userReward
+- User --- addUserReward -&gt; attrationName: Mojave National Preserve
+ ***//---------&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; McKinley Tower - distance: 11.058954440370245
+ ***//---------&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Jackson Hole - distance: 2003.0259684302957
+ ***//---------&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Mojave National Preserve - distance: 2346.031132397722
+ ***//---------&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Disneyland - distance: 2361.374968104428
+ ***//---------&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Joshua Tree National Park - distance: 2411.4991612046138
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.8.1</a> at 26 oct. 2021 16:04:34</p>
+</div>
+</div>
+</body>
+</html>

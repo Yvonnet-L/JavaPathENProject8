@@ -1,30 +1,32 @@
 package tourGuide.user;
 
+import tourGuide.beans.Provider;
+import tourGuide.beans.VisitedLocation;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-
-import gpsUtil.location.VisitedLocation;
-import tripPricer.Provider;
 
 public class User {
 	private final UUID userId;
 	private final String userName;
 	private String phoneNumber;
 	private String emailAddress;
-	private Date latestLocationTimestamp;
+	private Date latestLocationTimestamp; // le dernier horodatage de localisation
 	private List<VisitedLocation> visitedLocations = new ArrayList<>();
 	private List<UserReward> userRewards = new ArrayList<>();
 	private UserPreferences userPreferences = new UserPreferences();
 	private List<Provider> tripDeals = new ArrayList<>();
+
+	//-----------------------------------------------------------------------------------------
 	public User(UUID userId, String userName, String phoneNumber, String emailAddress) {
 		this.userId = userId;
 		this.userName = userName;
 		this.phoneNumber = phoneNumber;
 		this.emailAddress = emailAddress;
 	}
-	
+	//-----------------------------------------------------------------------------------------
 	public UUID getUserId() {
 		return userId;
 	}
@@ -68,9 +70,16 @@ public class User {
 	public void clearVisitedLocations() {
 		visitedLocations.clear();
 	}
-	
+	/** ---------------------------------------------------------------------------------------------
+	 * Method which adds a Reward for a user
+	 *
+	 * @param userReward
+	 */
 	public void addUserReward(UserReward userReward) {
-		if(userRewards.stream().filter(r -> !r.attraction.attractionName.equals(userReward.attraction)).count() == 0) {
+		/** here it is checked if the user does not have Rewards (discounts) on this attraction
+		 *  if this is the case we add one
+		 */
+		if(userRewards.stream().filter(r -> r.attraction.attractionName.equals(userReward.attraction)).count() == 0) {
 			userRewards.add(userReward);
 		}
 	}

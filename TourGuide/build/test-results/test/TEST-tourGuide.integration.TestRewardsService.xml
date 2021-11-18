@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tourGuide.integration.TestRewardsService" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-10-26T14:03:19" hostname="DESKTOP-IV3G66P" time="14.155">
+  <properties/>
+  <testcase name="nearAllAttractions()" classname="tourGuide.integration.TestRewardsService" time="13.263"/>
+  <testcase name="userGetRewards()" classname="tourGuide.integration.TestRewardsService" time="0.875"/>
+  <testcase name="isWithinAttractionProximity()" classname="tourGuide.integration.TestRewardsService" time="0.015"/>
+  <system-out><![CDATA[16:03:12.680 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:03:12.720 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:03:12.757 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [tourGuide.integration.TestRewardsService] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:03:12.774 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [tourGuide.integration.TestRewardsService], using SpringBootContextLoader
+16:03:12.779 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [tourGuide.integration.TestRewardsService]: class path resource [tourGuide/integration/TestRewardsService-context.xml] does not exist
+16:03:12.780 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [tourGuide.integration.TestRewardsService]: class path resource [tourGuide/integration/TestRewardsServiceContext.groovy] does not exist
+16:03:12.780 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [tourGuide.integration.TestRewardsService]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:03:12.782 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tourGuide.integration.TestRewardsService]: TestRewardsService does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:03:12.854 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [tourGuide.integration.TestRewardsService]
+16:03:12.961 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\ptiqu\Desktop\OpenClassRooms\Projets\P8\Api\JavaPathENProject8\TourGuide\build\classes\java\main\tourGuide\Application.class]
+16:03:12.972 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tourGuide.Application for test class tourGuide.integration.TestRewardsService
+16:03:13.128 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [tourGuide.integration.TestRewardsService]: using defaults.
+16:03:13.129 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+16:03:13.146 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+16:03:13.147 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+16:03:13.147 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@21e4ecbb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@10873362, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@599a8f7e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1a2d72b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c2ac47a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@359fe8be, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@38f3700c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@493a2d50, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3f92919, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@49e9ebc0]
+16:03:13.153 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1f83d720 testClass = TestRewardsService, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1913ef5a testClass = TestRewardsService, locations = '{}', classes = '{class tourGuide.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@65cbfe7f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@483e0d4d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@67324d81, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6081d692, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@4300dba9], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+16:03:13.189 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+2021-10-26 16:03:14.056  WARN 17244 --- [kground-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-10-26 16:03:14.474  INFO 17244 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f0e00eb4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.6.RELEASE)
+
+2021-10-26 16:03:14.767  INFO 17244 --- [    Test worker] t.integration.TestRewardsService         : No active profile set, falling back to default profiles: default
+2021-10-26 16:03:15.778  INFO 17244 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=14368776-ba92-3a25-b398-e8097795f599
+2021-10-26 16:03:15.831  INFO 17244 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'tourGuide.proxies.MicroserviceGpsUtilProxy' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-26 16:03:15.832  INFO 17244 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'tourGuide.proxies.MicroserviceRewardCentralProxy' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-26 16:03:15.833  INFO 17244 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'tourGuide.proxies.MicroserviceTripPricerProxy' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-26 16:03:15.918  INFO 17244 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f0e00eb4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-26 16:03:16.382  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       : TestMode enabled
+2021-10-26 16:03:16.382 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Initializing users
+2021-10-26 16:03:16.390  INFO 17244 --- [    Test worker] o.j.m.DefaultMonetaryContextFactory      : Using custom MathContext: precision=256, roundingMode=HALF_EVEN
+-TourGuideService-  VisitedLocations: 3eb563c6-ab25-462b-a3ab-646577743397 - 3.424385093592221 - -9.51486542672734 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3eb563c6-ab25-462b-a3ab-646577743397 - -66.64982780352304 - -102.05932563050051 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3eb563c6-ab25-462b-a3ab-646577743397 - -17.425288897338262 - 91.50230055289694 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6b51474f-cef1-451a-a7a6-c05e77a5b666 - -69.62893996190937 - 117.27437898672213 - Thu Oct 14 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6b51474f-cef1-451a-a7a6-c05e77a5b666 - -81.05483496267247 - 113.1658703155494 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6b51474f-cef1-451a-a7a6-c05e77a5b666 - 38.192530317413556 - -171.16913437603375 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea1066f9-031d-44ce-8ecb-d47e428babf4 - -84.7842237893161 - 167.1938567531363 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea1066f9-031d-44ce-8ecb-d47e428babf4 - -7.8971400854696014 - -128.83459806539616 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea1066f9-031d-44ce-8ecb-d47e428babf4 - 63.496813713300355 - -69.5264766328155 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 95ca75be-8498-4ed1-8a5e-809099e424cd - 50.48411310886044 - 86.84952431135702 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 95ca75be-8498-4ed1-8a5e-809099e424cd - -35.56163707818131 - -77.8703734930038 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 95ca75be-8498-4ed1-8a5e-809099e424cd - -74.90341268316187 - -11.786117030063792 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d916bafd-f363-4b25-a532-1c46f8aa1870 - -64.64311575707899 - -178.87799838853655 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d916bafd-f363-4b25-a532-1c46f8aa1870 - 55.729075450519645 - 19.228142894484364 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d916bafd-f363-4b25-a532-1c46f8aa1870 - 67.42673794871862 - 146.45345369626534 - Fri Oct 01 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d955ba60-2340-47bf-9784-99f82380ae95 - -9.23656460154892 - -166.7898561737024 - Fri Oct 08 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d955ba60-2340-47bf-9784-99f82380ae95 - 76.8016933590821 - -114.0208534928634 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d955ba60-2340-47bf-9784-99f82380ae95 - -74.2580369525428 - 133.46961653173173 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 51e7fb30-d97b-420f-92c1-f9b3fcd24865 - -52.730593634925235 - 67.38628990746733 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 51e7fb30-d97b-420f-92c1-f9b3fcd24865 - -58.15616151488909 - 98.18452478036488 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 51e7fb30-d97b-420f-92c1-f9b3fcd24865 - -10.315014047565413 - 85.98482282869065 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 71a741b4-ccd1-46fd-9c88-9409aaa1356c - -26.04119143704836 - 56.56361293526834 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 71a741b4-ccd1-46fd-9c88-9409aaa1356c - -73.21371152848377 - 141.97322004353373 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 71a741b4-ccd1-46fd-9c88-9409aaa1356c - 40.99862036928715 - -52.550746966930774 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 940a27cf-2343-4fcb-8fe2-830160046efc - -46.768223005964465 - 86.85675546581803 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 940a27cf-2343-4fcb-8fe2-830160046efc - 57.64954582394705 - 136.34603189910388 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 940a27cf-2343-4fcb-8fe2-830160046efc - 82.40546438738244 - 42.29545193237388 - Thu Sep 30 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 82d03f20-ef05-4824-a22f-632d168d49ed - -2.349030421931218 - -138.86501477749573 - Wed Oct 13 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 82d03f20-ef05-4824-a22f-632d168d49ed - 68.7836240239385 - -154.86891879199172 - Thu Sep 30 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 82d03f20-ef05-4824-a22f-632d168d49ed - -3.894904415749906 - 135.4535054555074 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b85909da-03d6-461f-896e-bdc6db42d043 - -81.38670479727112 - -86.37547945923427 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b85909da-03d6-461f-896e-bdc6db42d043 - -68.18741622645534 - 45.892757771941405 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b85909da-03d6-461f-896e-bdc6db42d043 - 80.38783940264918 - 58.09385868096902 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 406e6138-c495-4270-bf47-18facf0c3e3e - 19.996539378522925 - -107.97255301965055 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 406e6138-c495-4270-bf47-18facf0c3e3e - -83.19520630712825 - -86.11991611447476 - Sat Oct 09 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 406e6138-c495-4270-bf47-18facf0c3e3e - 7.855628272380628 - -122.50854896154755 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e353695b-55a3-43ed-99ee-df79b8f1daa6 - -60.399488488027565 - 119.35139702376944 - Sat Oct 09 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e353695b-55a3-43ed-99ee-df79b8f1daa6 - 14.693168400866895 - 102.98353480077719 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e353695b-55a3-43ed-99ee-df79b8f1daa6 - 16.973867715330783 - 167.24514760979258 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4ea6cdeb-e608-4654-8d7e-b4f29ad71595 - 8.961693649244197 - -159.69879824587062 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4ea6cdeb-e608-4654-8d7e-b4f29ad71595 - -4.1143146870877985 - -68.43420950686442 - Fri Oct 15 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4ea6cdeb-e608-4654-8d7e-b4f29ad71595 - -28.251855212495123 - 11.611665527746368 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c0198056-b3d0-4dc7-9e75-9deea768895e - 16.893939366577612 - -34.613749775689115 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c0198056-b3d0-4dc7-9e75-9deea768895e - 36.53665838802398 - 33.72013388824868 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c0198056-b3d0-4dc7-9e75-9deea768895e - 42.2138845708853 - -59.09734565274306 - Fri Oct 08 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 9f3f4742-eea9-4a13-9286-ab2433e9e4b1 - -25.127935118287148 - 9.960039597321014 - Tue Oct 26 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 9f3f4742-eea9-4a13-9286-ab2433e9e4b1 - 27.649573131191815 - -155.30681823702767 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 9f3f4742-eea9-4a13-9286-ab2433e9e4b1 - 2.6593961354409714 - 152.6790295099563 - Mon Oct 04 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 858efce1-ed4c-4a4e-be34-8d3b07ce3a63 - 4.414952502649456 - 30.406301620520424 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 858efce1-ed4c-4a4e-be34-8d3b07ce3a63 - 39.50211918341961 - 140.57495858639203 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 858efce1-ed4c-4a4e-be34-8d3b07ce3a63 - 76.22546486478319 - -143.77268196737677 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 847c7c4e-fd3b-4897-b78a-345b01eb721c - 14.217601720919873 - 28.863269189165408 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 847c7c4e-fd3b-4897-b78a-345b01eb721c - -18.413227262906574 - -67.42491621939482 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 847c7c4e-fd3b-4897-b78a-345b01eb721c - 9.397294335591496 - -69.81001425002431 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 239056ef-a103-41cf-a294-0ded47ba7f63 - -20.425720238755787 - 133.51852632128055 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 239056ef-a103-41cf-a294-0ded47ba7f63 - -84.975905051547 - -170.91328958036843 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 239056ef-a103-41cf-a294-0ded47ba7f63 - -21.321805653172824 - -111.88629401191191 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 274fb989-d54d-4691-b54d-83fda869a4ee - -60.69957199880141 - -124.89982263312714 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 274fb989-d54d-4691-b54d-83fda869a4ee - 20.53394514364794 - -106.47936455896514 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 274fb989-d54d-4691-b54d-83fda869a4ee - 58.65534747252855 - -158.6095737520044 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 128000a5-beeb-468e-871d-0772f782321c - -47.30156144984342 - 71.91862860702537 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 128000a5-beeb-468e-871d-0772f782321c - -43.68868291174577 - -5.446901614475536 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 128000a5-beeb-468e-871d-0772f782321c - -64.50255226142508 - -13.738041678028651 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4edca044-dcad-4c71-a61e-537c5d15585a - 14.330253208437213 - 59.72021936204828 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4edca044-dcad-4c71-a61e-537c5d15585a - 60.942271993208834 - -138.5544163011377 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4edca044-dcad-4c71-a61e-537c5d15585a - 81.51728550512809 - -123.34816744016243 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ca9e80e1-ba5c-463d-adda-30de2b2fac0b - -13.419716321653297 - -22.234461975160116 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ca9e80e1-ba5c-463d-adda-30de2b2fac0b - 24.16773713215585 - -6.993612787792927 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ca9e80e1-ba5c-463d-adda-30de2b2fac0b - 35.17859661090752 - -101.00256395021107 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 93ce5276-f66d-47d1-a87a-db4d8c988a56 - -57.470820882685864 - -141.489704975004 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 93ce5276-f66d-47d1-a87a-db4d8c988a56 - -12.93558585516628 - 144.88375217117272 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 93ce5276-f66d-47d1-a87a-db4d8c988a56 - -40.99350881673869 - 156.69857131978875 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: cc7e81d9-58c3-428c-9e7e-61ea77767436 - -16.154760989083954 - -126.00547567961696 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: cc7e81d9-58c3-428c-9e7e-61ea77767436 - -29.527715617249747 - 34.697947550332884 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: cc7e81d9-58c3-428c-9e7e-61ea77767436 - -62.36752811382132 - -43.44971702454657 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e0249c9e-79da-40ac-80ab-b3d64bef7980 - -40.416003685056474 - -128.97257876348613 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e0249c9e-79da-40ac-80ab-b3d64bef7980 - 54.0870733591085 - 57.301330059219964 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e0249c9e-79da-40ac-80ab-b3d64bef7980 - 52.136516175446076 - -103.42523884749676 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2183025c-376b-4e14-a910-b8b6b9878472 - 65.91718072791963 - -131.75816704911375 - Mon Oct 25 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2183025c-376b-4e14-a910-b8b6b9878472 - 62.60288148378868 - 67.41751677828475 - Wed Oct 20 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2183025c-376b-4e14-a910-b8b6b9878472 - -29.90377189929341 - -134.54468496412824 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e3e08c6d-053c-452b-9226-50f8bf93b079 - -78.65566102933761 - -118.76199350530688 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e3e08c6d-053c-452b-9226-50f8bf93b079 - 3.2955825164072223 - -0.6601892327230985 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e3e08c6d-053c-452b-9226-50f8bf93b079 - -78.95450578522406 - -34.47045955223595 - Sat Oct 09 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 95f27381-5a62-465b-995e-5336de7872e5 - -67.7830481496102 - -138.35928668746834 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 95f27381-5a62-465b-995e-5336de7872e5 - -37.32979300452508 - 152.86524783578767 - Fri Oct 15 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 95f27381-5a62-465b-995e-5336de7872e5 - -8.900073543536195 - 173.9898539813185 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c058f99a-0f5e-4f93-a58f-2485047e3911 - 68.78088460795087 - -75.5263443241584 - Wed Oct 20 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c058f99a-0f5e-4f93-a58f-2485047e3911 - -15.934168273058049 - -112.1821012340471 - Fri Oct 15 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c058f99a-0f5e-4f93-a58f-2485047e3911 - 63.70489745839103 - -8.971810220411584 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a5f6ebf2-6679-4870-bb24-f54ca0dd8819 - -43.34597837798197 - 171.84307874932114 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a5f6ebf2-6679-4870-bb24-f54ca0dd8819 - 17.157875985733824 - -108.48358801237713 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a5f6ebf2-6679-4870-bb24-f54ca0dd8819 - 14.451790471646504 - 31.31730086666755 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: cf689c26-74eb-4bbf-9906-7a26b15ad3f8 - 0.0836371592706655 - 178.36835883770124 - Thu Oct 14 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: cf689c26-74eb-4bbf-9906-7a26b15ad3f8 - 39.711273941697044 - -42.496329327769104 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: cf689c26-74eb-4bbf-9906-7a26b15ad3f8 - 9.65202014051998 - -148.32261634282807 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 24bddb63-74a8-4205-b78e-0a2981b5b28c - 12.646019315210765 - -133.09429308583407 - Wed Oct 20 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 24bddb63-74a8-4205-b78e-0a2981b5b28c - -38.71287147950005 - -91.52756159339664 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 24bddb63-74a8-4205-b78e-0a2981b5b28c - 82.34025844849154 - 157.68781712464312 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea601e99-777c-4a5d-8279-0a5909e693c8 - 58.75500541248172 - 127.9778292522011 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea601e99-777c-4a5d-8279-0a5909e693c8 - -62.75973377297974 - -99.00298925544494 - Mon Oct 04 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea601e99-777c-4a5d-8279-0a5909e693c8 - 33.7174599816848 - 136.45403219001832 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ed5f9969-f88c-41a1-a443-3e15caa42be1 - 63.344876517507544 - -116.34855818512474 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ed5f9969-f88c-41a1-a443-3e15caa42be1 - -59.21729828841994 - -67.56398232420611 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ed5f9969-f88c-41a1-a443-3e15caa42be1 - -62.719380972640934 - -146.20143073363 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: fa8f0e56-608c-4008-a8ce-f33203b41830 - 53.97240402574718 - -179.88522698312826 - Fri Oct 01 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: fa8f0e56-608c-4008-a8ce-f33203b41830 - -51.232771954976435 - -103.1985544988126 - Mon Oct 25 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: fa8f0e56-608c-4008-a8ce-f33203b41830 - 76.47068385700717 - 40.149263073659455 - Sat Oct 09 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b7898fac-e18d-4d2f-b21d-32c6b4f7374a - 78.61023917389454 - 87.85094597747451 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b7898fac-e18d-4d2f-b21d-32c6b4f7374a - -79.93234191391868 - 17.695909120314298 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b7898fac-e18d-4d2f-b21d-32c6b4f7374a - -29.296981388978608 - 169.22486203280556 - Fri Oct 15 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 511b649c-4d7e-4be3-bd00-e1358b21b767 - 44.1961589773843 - -149.65798641475237 - Fri Oct 08 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 511b649c-4d7e-4be3-bd00-e1358b21b767 - -74.83183858017291 - 52.103537782311946 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 511b649c-4d7e-4be3-bd00-e1358b21b767 - -13.358395360804408 - -47.90738818855931 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0fc4dbbc-6c53-4770-839a-a294c8839a7a - -10.198356530472893 - 159.1370249777574 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0fc4dbbc-6c53-4770-839a-a294c8839a7a - -0.07399285197384131 - -124.24738393838999 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0fc4dbbc-6c53-4770-839a-a294c8839a7a - -15.536150068219115 - 34.80536249285265 - Tue Oct 26 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 764086b3-311b-4de5-a596-1f58ebcec36d - -48.70992996154346 - -110.07921135694248 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 764086b3-311b-4de5-a596-1f58ebcec36d - -18.660923867635958 - 140.67307425002406 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 764086b3-311b-4de5-a596-1f58ebcec36d - -21.16558993949601 - 36.763971675472675 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3b3af32e-0906-42e4-9658-6295da2ada2f - -76.3185576030315 - 150.95184473045168 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3b3af32e-0906-42e4-9658-6295da2ada2f - -84.59119340921697 - -128.1238387286321 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3b3af32e-0906-42e4-9658-6295da2ada2f - -33.180924557175054 - -49.3670792274728 - Thu Oct 14 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 228a2605-2d83-45e1-b4c4-655f4f3563b9 - 14.318691365073008 - -178.00604445107962 - Thu Oct 07 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 228a2605-2d83-45e1-b4c4-655f4f3563b9 - -20.062952226497444 - 17.370945708964797 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 228a2605-2d83-45e1-b4c4-655f4f3563b9 - 72.63577237626606 - -129.45829127381012 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 45dbabe8-fd1d-4c7b-8d8e-0a00390f0059 - -56.53228646703477 - -50.196793392888935 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 45dbabe8-fd1d-4c7b-8d8e-0a00390f0059 - 41.266870950552246 - -50.77542684275696 - Fri Oct 01 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 45dbabe8-fd1d-4c7b-8d8e-0a00390f0059 - -17.380821927882266 - 119.99108506182768 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d2574317-dd5d-4118-b30f-a54c8ec95bc6 - -65.45339839023157 - 145.40606921889935 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d2574317-dd5d-4118-b30f-a54c8ec95bc6 - -38.09441936904533 - 84.06475298227167 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: d2574317-dd5d-4118-b30f-a54c8ec95bc6 - 72.60663736596786 - -23.165909981861745 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b87a879b-08b0-4190-a0e8-b25ae874f066 - -81.93390733735117 - -116.00195954402031 - Thu Oct 14 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b87a879b-08b0-4190-a0e8-b25ae874f066 - -15.52526492748855 - 171.82918403085625 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b87a879b-08b0-4190-a0e8-b25ae874f066 - 75.8569571498227 - 6.63454394195972 - Fri Oct 15 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c79eaf74-9fa1-4581-a6be-2a8e06dff873 - 40.9361358294981 - 96.44478335634119 - Mon Oct 25 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c79eaf74-9fa1-4581-a6be-2a8e06dff873 - 84.89281558587194 - 16.339316818116913 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: c79eaf74-9fa1-4581-a6be-2a8e06dff873 - 72.83310815732352 - 119.43012692905592 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a1b1eed0-0aec-45a7-99a7-95561a94a517 - -29.241980623334427 - 57.16588886745609 - Thu Sep 30 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a1b1eed0-0aec-45a7-99a7-95561a94a517 - 46.54490524811604 - -134.33268457342928 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a1b1eed0-0aec-45a7-99a7-95561a94a517 - -78.77064416619555 - -134.76941903927633 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 584892b2-f701-4350-b833-03505a71b7a5 - -62.32793378397915 - -113.80024880052483 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 584892b2-f701-4350-b833-03505a71b7a5 - -27.78209345098856 - 126.09442793198241 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 584892b2-f701-4350-b833-03505a71b7a5 - 69.76792406654405 - 35.79593301081718 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 61064a48-1b56-404d-a852-a6ae22dfa9fd - 9.456295051253505 - 23.573682196072554 - Mon Oct 04 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 61064a48-1b56-404d-a852-a6ae22dfa9fd - 77.65788199545182 - 69.9578015360805 - Wed Oct 13 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 61064a48-1b56-404d-a852-a6ae22dfa9fd - 73.28509058165912 - -108.97335596946645 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 59bdda12-53da-4e4e-8d57-d8915ae0c16b - 76.73093962701782 - -122.04618587128951 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 59bdda12-53da-4e4e-8d57-d8915ae0c16b - 38.061953383309174 - -130.54361319745962 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 59bdda12-53da-4e4e-8d57-d8915ae0c16b - -39.37834860299642 - 76.618166944069 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0895cd97-e86e-4925-8092-fe6c0ab55c5c - 72.33233346572464 - 109.48497092348657 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0895cd97-e86e-4925-8092-fe6c0ab55c5c - 22.614213338914297 - -41.047384806083755 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0895cd97-e86e-4925-8092-fe6c0ab55c5c - 22.40186298484241 - 145.8610042331764 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 49b60dba-e749-45ec-af56-6da7ebe8a58f - -23.47782685754234 - -57.40791921648271 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 49b60dba-e749-45ec-af56-6da7ebe8a58f - -60.21350378503146 - 17.325699853983508 - Mon Oct 04 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 49b60dba-e749-45ec-af56-6da7ebe8a58f - 38.129899292269045 - 49.91205558340644 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a892e9a1-ee5a-403d-8829-c22037e1cef7 - -53.343853812204955 - -155.17340557219316 - Thu Oct 07 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a892e9a1-ee5a-403d-8829-c22037e1cef7 - -68.81166925294863 - 30.092240054112892 - Fri Oct 08 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a892e9a1-ee5a-403d-8829-c22037e1cef7 - -82.8307960857636 - -43.56402465534575 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea952944-3a5f-4765-8fb5-829c59f9c78e - 62.036573275109845 - 12.63899041695612 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea952944-3a5f-4765-8fb5-829c59f9c78e - 47.62594797824872 - 131.54007305931867 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ea952944-3a5f-4765-8fb5-829c59f9c78e - 64.46910787069976 - 99.36793231990413 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 69fa6cf0-a92f-44f2-bccb-d3e1c45cbfde - 31.133528773029383 - -168.73114510526685 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 69fa6cf0-a92f-44f2-bccb-d3e1c45cbfde - -26.29440217154758 - -77.16345782691494 - Thu Oct 14 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 69fa6cf0-a92f-44f2-bccb-d3e1c45cbfde - 50.41587176627914 - -47.275733930449064 - Mon Oct 25 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2cca0076-43f1-4172-bf11-5e09bb64fe77 - 8.527224678003833 - 120.48516648816235 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2cca0076-43f1-4172-bf11-5e09bb64fe77 - -64.24478401945726 - -118.18575811605032 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2cca0076-43f1-4172-bf11-5e09bb64fe77 - -52.4769376770521 - -74.0867199466966 - Tue Oct 26 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 5400abcc-d081-415e-89f6-f4087edfb6f0 - 60.73444025978688 - -101.24062358147391 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 5400abcc-d081-415e-89f6-f4087edfb6f0 - 78.94423117356405 - -42.41150567060262 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 5400abcc-d081-415e-89f6-f4087edfb6f0 - 17.557709665483046 - -23.13022861595681 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2a01c043-d83d-4cb1-8b6f-3d20e99277ac - 9.612354643661178 - -63.80489466762879 - Thu Oct 07 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2a01c043-d83d-4cb1-8b6f-3d20e99277ac - -72.49458489621908 - -88.64953668372908 - Wed Oct 13 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2a01c043-d83d-4cb1-8b6f-3d20e99277ac - -83.05076081450939 - 3.7566654428204345 - Thu Sep 30 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a56bdfd3-58d1-4b2a-9029-eb6c99274bb2 - -41.861701141350125 - 52.1214741239433 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a56bdfd3-58d1-4b2a-9029-eb6c99274bb2 - 57.101305677854896 - 155.47287120199314 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: a56bdfd3-58d1-4b2a-9029-eb6c99274bb2 - -1.4680857966997536 - -19.50461207706263 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b232e590-966d-4e5f-9710-a3ce803c2d38 - -0.3179700975739479 - -83.9547365821135 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b232e590-966d-4e5f-9710-a3ce803c2d38 - -37.6370704305054 - -57.399881188734994 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b232e590-966d-4e5f-9710-a3ce803c2d38 - 26.864296753740803 - -151.52099226420916 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6eaf7336-a3b2-4486-8d3d-d5271f752150 - 38.852913812778326 - -117.8851356312218 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6eaf7336-a3b2-4486-8d3d-d5271f752150 - -56.90537992230627 - 47.22021002964695 - Mon Oct 25 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6eaf7336-a3b2-4486-8d3d-d5271f752150 - -0.33729187910171277 - 82.87271287673406 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 78510d9c-49cb-49c6-8883-1fd6d6c7d8ea - -46.5353403446438 - 150.36748438183054 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 78510d9c-49cb-49c6-8883-1fd6d6c7d8ea - 4.081624770522424 - -38.78978326896561 - Thu Oct 07 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 78510d9c-49cb-49c6-8883-1fd6d6c7d8ea - -77.93048079109911 - -141.01227095666388 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f4f2e4fc-69b3-47d1-884a-3461bc70cb9c - 62.97458342972024 - -46.201682782767875 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f4f2e4fc-69b3-47d1-884a-3461bc70cb9c - 3.210850452753661 - -26.469007131327743 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f4f2e4fc-69b3-47d1-884a-3461bc70cb9c - -46.696671975264806 - 76.76134869482411 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 981b9ac3-fe92-4878-b5ee-411f1ff03dbe - -40.42499204627248 - 2.0571503763434293 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 981b9ac3-fe92-4878-b5ee-411f1ff03dbe - -51.39449065794682 - -85.22686753013059 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 981b9ac3-fe92-4878-b5ee-411f1ff03dbe - -19.896970685306584 - 72.87944435994098 - Wed Oct 20 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0f30b2ce-42fc-4a6d-957c-df962f029ff1 - 36.55094602182747 - -157.11468290159894 - Mon Oct 04 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0f30b2ce-42fc-4a6d-957c-df962f029ff1 - 39.43919904119515 - 154.515639722775 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0f30b2ce-42fc-4a6d-957c-df962f029ff1 - -16.649387500013532 - 43.808529372416814 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 33ba29a7-e801-4a51-986b-76a5ae8f387e - 17.331523448286276 - -149.62336439226132 - Thu Sep 30 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 33ba29a7-e801-4a51-986b-76a5ae8f387e - -31.752206904828483 - -136.49352531378574 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 33ba29a7-e801-4a51-986b-76a5ae8f387e - 82.03319234605647 - -130.77126901693856 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0e0c8ffc-5ec4-4b36-95f7-9b1eb9339881 - 79.02540514944431 - 73.13370124820779 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0e0c8ffc-5ec4-4b36-95f7-9b1eb9339881 - -37.03761510980456 - -35.59903049308497 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0e0c8ffc-5ec4-4b36-95f7-9b1eb9339881 - 63.1909053588887 - -113.43266792117001 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0b27ebdc-8455-4b39-b318-060547e67a8d - 47.97190289865239 - -88.9286228711667 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0b27ebdc-8455-4b39-b318-060547e67a8d - 15.925602246861445 - 23.39359930974436 - Wed Oct 13 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0b27ebdc-8455-4b39-b318-060547e67a8d - -67.85760255988714 - 104.09677132273549 - Fri Oct 01 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f54c6ff6-6a61-4ead-b860-5701aef982c1 - 59.472217562879734 - -169.39737207371553 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f54c6ff6-6a61-4ead-b860-5701aef982c1 - -69.62891251807235 - -149.5720208597162 - Sun Oct 17 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f54c6ff6-6a61-4ead-b860-5701aef982c1 - 24.907927776664465 - -100.5356830921888 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ceb4dca6-fdc0-49ac-88da-c10dbdac568e - 60.409715350099276 - -177.0979633493814 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ceb4dca6-fdc0-49ac-88da-c10dbdac568e - -23.744915456401515 - 157.13187884789335 - Mon Oct 25 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ceb4dca6-fdc0-49ac-88da-c10dbdac568e - 53.64707924216563 - 9.98007357852103 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3c856a6b-0bce-4cce-ac23-1d0af3c9fd47 - -54.90245106891538 - -149.0457302868193 - Tue Oct 26 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3c856a6b-0bce-4cce-ac23-1d0af3c9fd47 - -83.16238408494246 - -111.15433759542375 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3c856a6b-0bce-4cce-ac23-1d0af3c9fd47 - 83.18413047480601 - -15.95975390541824 - Fri Oct 08 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 8baa33ae-8f88-4008-b641-0311a3578492 - 81.58607147567128 - -94.10905173923855 - Fri Oct 08 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 8baa33ae-8f88-4008-b641-0311a3578492 - -52.92779287958046 - 87.54034172635846 - Thu Oct 07 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 8baa33ae-8f88-4008-b641-0311a3578492 - -24.7468975834841 - 164.9675899837677 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: fbc9f1a0-5c11-4d65-af66-6ea175ce548e - -39.35480857959207 - 93.50175057236095 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: fbc9f1a0-5c11-4d65-af66-6ea175ce548e - -23.340007428980236 - -46.56381933555306 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: fbc9f1a0-5c11-4d65-af66-6ea175ce548e - 82.65809657764996 - -11.052945798723272 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 71ca1f23-e6c9-472e-97cc-ca813640a72f - 17.861152451266122 - -160.2634978117098 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 71ca1f23-e6c9-472e-97cc-ca813640a72f - 40.827633408624095 - -100.25849684578809 - Mon Oct 04 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 71ca1f23-e6c9-472e-97cc-ca813640a72f - -35.82908920052968 - 144.21076513066652 - Wed Oct 20 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 1c9609bb-f2df-49a3-863a-9698d72cda63 - -23.184429547832593 - -62.488816707754964 - Tue Oct 26 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 1c9609bb-f2df-49a3-863a-9698d72cda63 - 44.49152502440805 - -132.32512242731755 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 1c9609bb-f2df-49a3-863a-9698d72cda63 - 74.61183893116231 - 50.37455557774621 - Thu Oct 07 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 1176e7b1-ff8f-4701-a924-884c6705f0d4 - 29.789403884460768 - -6.412722270830898 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 1176e7b1-ff8f-4701-a924-884c6705f0d4 - -51.729117968271 - 44.50569372243106 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 1176e7b1-ff8f-4701-a924-884c6705f0d4 - -38.07660054430649 - 15.946247077148087 - Fri Oct 15 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3cc5f9ce-f9a6-4806-82a5-f35e6ed9f15f - 50.09074957620254 - 154.52212396052573 - Tue Oct 12 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3cc5f9ce-f9a6-4806-82a5-f35e6ed9f15f - -30.37960106746472 - 54.76742390279773 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3cc5f9ce-f9a6-4806-82a5-f35e6ed9f15f - 78.99997710420232 - 100.77269342058293 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7310452a-36aa-47ff-af47-e053ccfe4b10 - 27.162306742311728 - -123.63310714519031 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7310452a-36aa-47ff-af47-e053ccfe4b10 - -69.00090213522049 - 65.93968336673561 - Tue Oct 05 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7310452a-36aa-47ff-af47-e053ccfe4b10 - -38.02270147357151 - 35.95254254732842 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 31ec4546-d48c-4ce4-a955-f1d61cd8ca34 - 53.615442530887975 - 81.15799884869887 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 31ec4546-d48c-4ce4-a955-f1d61cd8ca34 - 0.1758608831744226 - 98.01275529248119 - Mon Oct 04 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 31ec4546-d48c-4ce4-a955-f1d61cd8ca34 - -15.180065272477222 - -52.783811327840496 - Tue Oct 26 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0c9355cf-a741-4fbb-826b-030f514d5d0b - -39.107476457526765 - -91.91722036820465 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0c9355cf-a741-4fbb-826b-030f514d5d0b - 52.81250680602122 - -163.90170760640137 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0c9355cf-a741-4fbb-826b-030f514d5d0b - 5.264797471046137 - 173.895248490717 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 8f29216e-05fd-452e-8edc-9420ce2735bf - 52.347393000591524 - -63.56608879121811 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 8f29216e-05fd-452e-8edc-9420ce2735bf - -10.772797444116392 - -120.57029835640313 - Thu Oct 14 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 8f29216e-05fd-452e-8edc-9420ce2735bf - -35.00986882276066 - 167.24986262227463 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6b18ea33-62c6-4f1a-ac5b-45d760e4bd64 - -3.1565089761458722 - 90.38086146253414 - Sun Oct 24 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6b18ea33-62c6-4f1a-ac5b-45d760e4bd64 - -72.5492300310923 - -86.81707155463823 - Wed Oct 13 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 6b18ea33-62c6-4f1a-ac5b-45d760e4bd64 - 8.677283643262157 - 46.580264958583825 - Fri Oct 15 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7237c546-832b-4fe8-918d-a5b04adc5d84 - 54.70618003984342 - 173.99903385434732 - Mon Oct 18 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7237c546-832b-4fe8-918d-a5b04adc5d84 - -31.14481325606542 - 97.46020193193289 - Mon Oct 25 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7237c546-832b-4fe8-918d-a5b04adc5d84 - -0.9834027091678621 - -16.363635929579317 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3d12b113-ec8a-413a-ab85-fe40de6c4d65 - 38.521493207059024 - -57.8100430579167 - Wed Oct 20 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3d12b113-ec8a-413a-ab85-fe40de6c4d65 - 80.77948308058996 - 109.52056926383926 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 3d12b113-ec8a-413a-ab85-fe40de6c4d65 - -24.69087141674739 - 53.447745441457954 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 624a6756-3958-4a65-9e06-1c6a62f0e39d - -64.77574101254464 - -58.181007943936166 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 624a6756-3958-4a65-9e06-1c6a62f0e39d - -17.995062552368537 - 98.56784465630841 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 624a6756-3958-4a65-9e06-1c6a62f0e39d - -11.965072009989711 - 75.82493015523247 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 320efbf1-5d63-4102-9a8d-2d10aba71a11 - -25.256131675990837 - -175.3569422868527 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 320efbf1-5d63-4102-9a8d-2d10aba71a11 - 12.272879170775994 - -27.288893375184728 - Fri Oct 01 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 320efbf1-5d63-4102-9a8d-2d10aba71a11 - -27.294669939273916 - -118.61304976914337 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0a91dd24-23fd-4036-a54c-3f766f0c42d2 - 45.920997499593625 - 116.24749741779522 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0a91dd24-23fd-4036-a54c-3f766f0c42d2 - -19.95632313442421 - 4.3262851100251964 - Tue Oct 19 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 0a91dd24-23fd-4036-a54c-3f766f0c42d2 - 17.44947489859338 - -67.28224486183834 - Sat Oct 23 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e514fe83-58b1-4453-866a-f7403d5e3c2a - 5.4418063671871835 - -52.80165231946444 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e514fe83-58b1-4453-866a-f7403d5e3c2a - 12.049611271021007 - -116.57562821590949 - Wed Oct 13 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e514fe83-58b1-4453-866a-f7403d5e3c2a - 13.552534232944055 - 56.81957348870239 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b3aaa5be-5dc6-40b3-b33f-d38d4862a3cb - -31.026316491872237 - 94.60745349287765 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b3aaa5be-5dc6-40b3-b33f-d38d4862a3cb - -28.497431977099005 - -137.83454706839868 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: b3aaa5be-5dc6-40b3-b33f-d38d4862a3cb - 20.97095510910333 - 79.83454954423956 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ee732caf-6645-4402-9c0a-b4a153a0ad94 - 43.714284903745124 - -64.9468922685453 - Fri Oct 08 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ee732caf-6645-4402-9c0a-b4a153a0ad94 - 76.55914616711127 - -143.68629344665533 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: ee732caf-6645-4402-9c0a-b4a153a0ad94 - 1.0546202456586258 - 46.81711309499292 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f543d849-6ba4-4dc7-a8f7-47c42776754b - 81.72664322247974 - 154.55384012810282 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f543d849-6ba4-4dc7-a8f7-47c42776754b - 24.04672838048674 - 82.9872049267467 - Wed Oct 06 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f543d849-6ba4-4dc7-a8f7-47c42776754b - 49.43944892867188 - 79.22857996532855 - Thu Oct 07 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7f5230d4-4c7e-4f0b-9252-1f635c6074d4 - -44.19194796771864 - 125.18634088736519 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7f5230d4-4c7e-4f0b-9252-1f635c6074d4 - -66.22223888616165 - -81.3382117483784 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7f5230d4-4c7e-4f0b-9252-1f635c6074d4 - 64.21358804072563 - -65.93525931255756 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f03a70df-893a-4772-b891-f22080396c4a - -30.860964054135287 - 121.00801842649162 - Thu Sep 30 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f03a70df-893a-4772-b891-f22080396c4a - -50.5326716200707 - -15.929766400099993 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: f03a70df-893a-4772-b891-f22080396c4a - -47.92599404311821 - -93.89602504256409 - Wed Sep 29 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 73f588f4-0c9b-4514-a62b-5d9e1a387df9 - 60.289172125806346 - -97.71999191183195 - Wed Oct 13 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 73f588f4-0c9b-4514-a62b-5d9e1a387df9 - 9.933855553380226 - 132.91136231485245 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 73f588f4-0c9b-4514-a62b-5d9e1a387df9 - -84.65255634662368 - -137.47024958561192 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 93acb394-d9fc-4c78-8c28-bb8c56a02b90 - 64.01587617323224 - 162.45004704904903 - Fri Oct 08 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 93acb394-d9fc-4c78-8c28-bb8c56a02b90 - 83.35288085229129 - 150.59120080805985 - Sat Oct 09 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 93acb394-d9fc-4c78-8c28-bb8c56a02b90 - 43.67683379190777 - 96.40233407647037 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 702d3a23-a84c-4982-a484-012c9e46e0b8 - -69.17557836087568 - -83.26164694564831 - Thu Sep 30 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 702d3a23-a84c-4982-a484-012c9e46e0b8 - -14.039284047148925 - 32.129859222619984 - Thu Sep 30 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 702d3a23-a84c-4982-a484-012c9e46e0b8 - -71.21654279587472 - 108.88834892787912 - Wed Oct 20 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e4c66c3f-9297-4335-8a8a-b10e8670cea1 - 19.21382303181123 - 118.45908927536527 - Sat Oct 16 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e4c66c3f-9297-4335-8a8a-b10e8670cea1 - 33.56997067023282 - 151.40102800359017 - Mon Sep 27 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: e4c66c3f-9297-4335-8a8a-b10e8670cea1 - 79.09647581301195 - -73.26322011539301 - Sun Oct 10 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7ab442e7-1533-4b08-8814-9eb260735b70 - 55.51928576252067 - 23.87770148804131 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7ab442e7-1533-4b08-8814-9eb260735b70 - 1.1937469810401495 - -51.45098350021814 - Fri Oct 22 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 7ab442e7-1533-4b08-8814-9eb260735b70 - -52.486990887750515 - 98.36492845121029 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2ab3dcda-0c11-4225-bdaa-9151b0a6a2bf - 25.482053599351033 - -131.77260709487277 - Thu Oct 21 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2ab3dcda-0c11-4225-bdaa-9151b0a6a2bf - 67.92150633849087 - -127.22515921807687 - Tue Sep 28 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 2ab3dcda-0c11-4225-bdaa-9151b0a6a2bf - -16.631651355018732 - -37.23077634510474 - Sun Oct 03 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4ac72bff-2fbf-4b51-81e3-cf07afea16c4 - -75.39686047032384 - 68.67522537862794 - Sat Oct 02 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4ac72bff-2fbf-4b51-81e3-cf07afea16c4 - -75.63249423970142 - -111.2735333236474 - Mon Oct 11 18:03:16 CEST 2021
+-TourGuideService-  VisitedLocations: 4ac72bff-2fbf-4b51-81e3-cf07afea16c4 - -10.958679888785952 - -160.41567075383915 - Sat Oct 23 18:03:16 CEST 2021
+2021-10-26 16:03:16.453 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Created 100 internal test users.
+2021-10-26 16:03:16.453 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Finished initializing users
+2021-10-26 16:03:16.470 DEBUG 17244 --- [pool-3-thread-1] tourGuide.tracker.Tracker                : Begin Tracker. Tracking 100 users.
+2021-10-26 16:03:16.862  WARN 17244 --- [    Test worker] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
+2021-10-26 16:03:16.868  WARN 17244 --- [    Test worker] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-10-26 16:03:16.868  INFO 17244 --- [    Test worker] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-10-26 16:03:16.876  WARN 17244 --- [    Test worker] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-10-26 16:03:16.877  INFO 17244 --- [    Test worker] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-10-26 16:03:16.952  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.080  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.182  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.257  INFO 17244 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-26 16:03:17.261  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.344  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.414  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.504  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.622  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.700  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.792  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.870  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:17.938  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.011  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.131  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.205  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.280  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.396  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.448  INFO 17244 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-10-26 16:03:18.457  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.514  INFO 17244 --- [    Test worker] t.integration.TestRewardsService         : Started TestRewardsService in 5.313 seconds (JVM running for 7.175)
+2021-10-26 16:03:18.561  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.665  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.755  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:18.844  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:19.026  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:19.119  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:19.193  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:19.195  INFO 17244 --- [    Test worker] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Disneyland
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Jackson Hole
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Mojave National Preserve
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Joshua Tree National Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Buffalo National River
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Hot Springs National Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Kartchner Caverns State Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Legend Valley
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Flowers Bakery of London
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: McKinley Tower
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Flatiron Building
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Fallingwater
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Union Station
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Roger Dean Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Texas Memorial Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Bryant-Denny Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Tiger Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Neyland Stadium
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: San Diego Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Franklin Park Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: El Paso Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Kansas City Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Bronx Zoo
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Cinderella Castle
+2021-10-26 16:03:32.418  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       :  ---> Launch getUser(String userName) with userName = internalUser78
+2021-10-26 16:03:32.420  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.421  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.422  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.423  INFO 17244 --- [    Test worker] tourGuide.tool.DtoBuilder                :  ---> Launch buildUserRewardDTO
+2021-10-26 16:03:32.457  INFO 17244 --- [    Test worker] tourGuide.service.TourGuideService       : TestMode enabled
+2021-10-26 16:03:32.457 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Initializing users
+-TourGuideService-  VisitedLocations: 901da28b-8929-445e-997f-0e582e9cfce6 - 80.12438862605012 - -126.65995284588737 - Thu Oct 21 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 901da28b-8929-445e-997f-0e582e9cfce6 - 59.78721169950302 - -164.51718599477127 - Sun Oct 10 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 901da28b-8929-445e-997f-0e582e9cfce6 - 62.53855642985147 - -83.59623034062578 - Thu Sep 30 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ff062cdd-f846-4b5d-b8a9-65f57b3e517e - 0.28544776775328273 - 157.00896814147063 - Fri Oct 08 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ff062cdd-f846-4b5d-b8a9-65f57b3e517e - 38.117489560124596 - 154.82755502158386 - Mon Oct 11 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ff062cdd-f846-4b5d-b8a9-65f57b3e517e - -3.7864909832332785 - 95.4180441829123 - Mon Oct 11 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 26a0f676-24dd-477b-8730-dedf0adfc530 - -8.704377418811774 - -80.90503448612121 - Sun Oct 17 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 26a0f676-24dd-477b-8730-dedf0adfc530 - -45.61420694247972 - -160.70861991886596 - Mon Oct 04 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 26a0f676-24dd-477b-8730-dedf0adfc530 - 35.755046094767394 - -44.28289738015121 - Wed Oct 20 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 1b7d7d64-7839-4a7d-8968-938981514613 - -12.503274210739093 - -116.03989619634962 - Wed Oct 20 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 1b7d7d64-7839-4a7d-8968-938981514613 - -76.05863148626695 - 114.92744309404048 - Tue Oct 05 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 1b7d7d64-7839-4a7d-8968-938981514613 - 44.94044783570544 - -166.199931831899 - Tue Sep 28 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 04c7d292-c6d4-46af-8077-a7d5bb9e288f - -27.443970572888368 - -40.901380506462175 - Thu Oct 07 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 04c7d292-c6d4-46af-8077-a7d5bb9e288f - 29.667605421193485 - 87.53603394277957 - Fri Oct 08 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 04c7d292-c6d4-46af-8077-a7d5bb9e288f - -11.40065568303092 - -75.4265324260997 - Fri Oct 22 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ef3a129c-fdd2-4c99-831c-94213b4f35f7 - 33.62221800904845 - -120.11962226245052 - Mon Oct 25 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ef3a129c-fdd2-4c99-831c-94213b4f35f7 - -19.897626755287618 - 68.44800627854465 - Sun Oct 10 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ef3a129c-fdd2-4c99-831c-94213b4f35f7 - -59.14780653165053 - 132.97679979223847 - Tue Oct 05 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 0810c3aa-ecb1-4285-9b22-78ffd578946c - -80.05406598803745 - 52.44444008230988 - Fri Oct 22 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 0810c3aa-ecb1-4285-9b22-78ffd578946c - -37.17850492842388 - 138.156631181278 - Sun Oct 03 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 0810c3aa-ecb1-4285-9b22-78ffd578946c - -54.551041547850915 - -82.97224388275284 - Sat Oct 23 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ba7877e0-87fd-4527-8e3b-7acce4e8748e - -10.098293154946191 - 0.49204436139933705 - Wed Sep 29 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ba7877e0-87fd-4527-8e3b-7acce4e8748e - 42.88712009830837 - 35.68131571245095 - Mon Oct 18 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ba7877e0-87fd-4527-8e3b-7acce4e8748e - -33.37628223642657 - 105.84634416275782 - Sun Oct 03 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: fa5d0b05-cd79-4c59-a839-acd27f929e94 - 2.857582169599695 - 109.55336180020657 - Fri Oct 08 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: fa5d0b05-cd79-4c59-a839-acd27f929e94 - 48.45928771840485 - -159.84166905590774 - Fri Oct 22 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: fa5d0b05-cd79-4c59-a839-acd27f929e94 - -21.982635019863785 - 122.03376904054369 - Wed Oct 13 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 0b0aedef-804d-4043-91e3-44b037111334 - 31.58647082116093 - -153.55041779329107 - Wed Oct 06 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 0b0aedef-804d-4043-91e3-44b037111334 - 0.7846172478121645 - 106.00875103762394 - Sun Oct 17 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 0b0aedef-804d-4043-91e3-44b037111334 - -36.706052119796226 - 123.56977105747222 - Mon Oct 11 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: b1cd9457-5d6b-4df6-9b38-a3327afb7e6b - 25.83739719296966 - -67.40413359439113 - Sat Oct 02 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: b1cd9457-5d6b-4df6-9b38-a3327afb7e6b - -71.93093327294312 - -14.34316582313096 - Thu Oct 21 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: b1cd9457-5d6b-4df6-9b38-a3327afb7e6b - -10.086208722154254 - -75.53682757257089 - Fri Oct 15 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 6ceabb94-3f71-44ad-bc03-fcfd655ec255 - -9.475144905951481 - 119.90239695380069 - Sat Oct 09 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 6ceabb94-3f71-44ad-bc03-fcfd655ec255 - -2.4185116351835063 - 162.21244725153667 - Thu Oct 21 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 6ceabb94-3f71-44ad-bc03-fcfd655ec255 - -49.461391576500844 - -58.395580688657546 - Mon Oct 25 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 849b65d6-5ba6-4236-95d6-4aec5beb3739 - -50.3966318083739 - -38.60212173234649 - Mon Oct 11 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 849b65d6-5ba6-4236-95d6-4aec5beb3739 - 5.255097479441147 - 112.00947899619945 - Sun Oct 17 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 849b65d6-5ba6-4236-95d6-4aec5beb3739 - 30.766450812437313 - -31.545670492386847 - Sun Oct 10 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: e61f966a-7187-46c3-80bd-fcab3590865a - 34.707780535279795 - 55.942704359469644 - Tue Oct 12 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: e61f966a-7187-46c3-80bd-fcab3590865a - 25.02628399365709 - 61.04799726416195 - Tue Oct 05 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: e61f966a-7187-46c3-80bd-fcab3590865a - -59.68055817734833 - -151.89762666304276 - Sat Oct 02 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: cb812bff-897d-4abf-bed6-4cd6dda32360 - -52.94465862467505 - -150.50144915632617 - Wed Oct 13 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: cb812bff-897d-4abf-bed6-4cd6dda32360 - 76.38730917834673 - 143.4144548982989 - Thu Oct 21 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: cb812bff-897d-4abf-bed6-4cd6dda32360 - 49.446471707731604 - -158.59499331112352 - Sun Oct 17 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 3d55846f-619d-46a6-ad56-340f99098048 - 66.72124023113312 - 61.88513227048634 - Fri Oct 15 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 3d55846f-619d-46a6-ad56-340f99098048 - 47.48200784573041 - -115.96810134533926 - Thu Oct 21 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 3d55846f-619d-46a6-ad56-340f99098048 - -32.710754875122674 - 174.7732074314855 - Tue Oct 05 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 6129b8e4-a508-4ecf-8b25-68fe34575666 - -32.30770760572734 - -100.67188274952085 - Sun Oct 10 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 6129b8e4-a508-4ecf-8b25-68fe34575666 - -44.78611706376909 - -72.82747016698112 - Mon Oct 11 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 6129b8e4-a508-4ecf-8b25-68fe34575666 - -47.70862583153337 - 22.601883524956406 - Thu Sep 30 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 47647d68-e335-41c7-9ea1-092aee63fe16 - -80.00811809100863 - -113.80936527384472 - Sat Oct 23 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 47647d68-e335-41c7-9ea1-092aee63fe16 - -77.86602026977562 - -81.54616107595955 - Sat Oct 16 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: 47647d68-e335-41c7-9ea1-092aee63fe16 - 19.234676062208408 - 128.42853068245336 - Sun Oct 17 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: d7067546-80f5-46bc-b647-e45a96b218da - -63.74206494314964 - -145.42680919036755 - Mon Oct 18 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: d7067546-80f5-46bc-b647-e45a96b218da - -12.031062029063463 - -143.08537027649416 - Sat Oct 16 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: d7067546-80f5-46bc-b647-e45a96b218da - 0.8470486858023349 - -160.44542127796836 - Tue Sep 28 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ad3c5a85-8181-4dc2-9283-99ee52f8c1cd - -41.99399824418816 - 108.68080570696736 - Tue Oct 05 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ad3c5a85-8181-4dc2-9283-99ee52f8c1cd - -33.601149139812776 - 120.18319350581544 - Wed Oct 06 18:03:32 CEST 2021
+-TourGuideService-  VisitedLocations: ad3c5a85-8181-4dc2-9283-99ee52f8c1cd - -64.42813103179716 - 153.45470241060394 - Sun Oct 24 18:03:32 CEST 2021
+2021-10-26 16:03:32.462 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Created 20 internal test users.
+2021-10-26 16:03:32.462 DEBUG 17244 --- [    Test worker] tourGuide.service.TourGuideService       : Finished initializing users
+2021-10-26 16:03:32.463 DEBUG 17244 --- [pool-6-thread-1] tourGuide.tracker.Tracker                : Begin Tracker. Tracking 20 users.
+2021-10-26 16:03:32.529  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:32.566  INFO 17244 --- [    Test worker] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:32.599  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:32.685  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Cinderella Castle
+2021-10-26 16:03:32.786  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:32.839  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:32.845  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:32.944  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:33.056  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Disneyland
+2021-10-26 16:03:33.151  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:03:33.246  INFO 17244 --- [pool-6-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Disneyland
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

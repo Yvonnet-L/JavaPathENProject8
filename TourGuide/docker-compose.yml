@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  ms-gpsutil:
+    image: ms-gpsutil
+    container_name: ms-gpsutil
+    #build: ../microservice-gpsUtil
+    ports:
+      - "9001:9001"
+    restart: always
+
+  ms-rewardcentral:
+    image: ms-rewardcentral
+    container_name: ms-rewardcentral
+    #build: ../microservice-RewardCentral
+    ports:
+      - "9002:9002"
+    restart: always
+
+  ms-trippricer:
+      image: ms-trippricer
+      container_name: ms-trippricer
+      #build: ../microservice-TripPricer
+      ports:
+        - "9003:9003"
+      restart: always
+
+  tourguide:
+    container_name: tourguide
+    ports:
+      - "9000:9000"
+    depends_on:
+      - ms-gpsutil
+      - ms-rewardcentral
+      - ms-trippricer
+    build: .
+    restart: always

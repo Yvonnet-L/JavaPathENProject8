@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TourGuideController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TourGuide</a> &gt; <a href="index.source.html" class="el_package">tourGuide</a> &gt; <span class="el_source">TourGuideController.java</span></div><h1>TourGuideController.java</h1><pre class="source lang-java linenums">package tourGuide;
+
+import com.jsoniter.output.JsonStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import tourGuide.beans.Attraction;
+import tourGuide.beans.Provider;
+import tourGuide.beans.VisitedLocation;
+import tourGuide.dto.*;
+import tourGuide.exceptions.DataNotConformException;
+import tourGuide.service.TourGuideService;
+import tourGuide.user.User;
+import tourGuide.user.UserPreferences;
+import tourGuide.user.UserReward;
+
+import javax.jws.soap.SOAPBinding;
+import javax.validation.Valid;
+import java.util.List;
+import java.util.UUID;
+
+@RestController
+<span class="fc" id="L24">public class TourGuideController {</span>
+
+	@Autowired
+	TourGuideService tourGuideService;
+
+<span class="fc" id="L29">    private Logger logger = LoggerFactory.getLogger(TourGuideController.class);</span>
+
+    /**
+     *
+     * @return String &quot;Greetings from TourGuide!&quot;
+     */
+    @RequestMapping(&quot;/&quot;)
+    public String index() {
+<span class="fc" id="L37">        logger.info(&quot; ---&gt; launch index - /&quot;);</span>
+<span class="fc" id="L38">        return &quot;Greetings from TourGuide!&quot;;</span>
+    }
+
+
+    /**
+     *
+     * @param userName
+     * @return JsonStream.serialize(visitedLocation.location)
+     */
+    @RequestMapping(&quot;/getLocation&quot;)
+    public LocationDTO getLocation(@RequestParam String userName) {
+<span class="fc" id="L49">        logger.info(&quot; ---&gt; launch getLocation - /getLocation - (@RequestParam String userName)&quot;);</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if ( userName.length() == 0){</span>
+<span class="fc" id="L51">            throw new DataNotConformException(&quot;Username is necessary!&quot;);</span>
+        }
+<span class="fc" id="L53">    	VisitedLocation visitedLocation = tourGuideService.getUserLocation(userName);</span>
+<span class="fc" id="L54">		return new LocationDTO( visitedLocation.location.latitude, visitedLocation.location.longitude);</span>
+    }
+
+    /**
+     *
+     * @param userName
+     * @return List&lt;AttractionNearDTO&gt;
+     */
+    @RequestMapping(&quot;/getNearbyAttractions&quot;) 
+    public List&lt;AttractionNearDTO&gt; getNearbyAttractions(@RequestParam String userName) {
+<span class="fc" id="L64">        logger.info(&quot; ---&gt; launch getNearbyAttractions - /getNearbyAttractions - (@RequestParam String userName)&quot;);</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if ( userName.length() == 0){</span>
+<span class="fc" id="L66">            throw new DataNotConformException(&quot;Username is necessary!&quot;);</span>
+        }
+<span class="fc" id="L68">        return tourGuideService.getNearByAttractions(userName);</span>
+    }
+
+    /**
+     *
+     * @param userName
+     * @return List&lt;UserReward&gt;
+     */
+    @RequestMapping(&quot;/getRewards&quot;) 
+    public List&lt;UserRewardDTO&gt; getRewards(@RequestParam String userName) {
+<span class="fc" id="L78">        logger.info(&quot; ---&gt; launch getRewards - /getRewards - (@RequestParam String userName)&quot;);</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if ( userName.length() == 0){</span>
+<span class="fc" id="L80">            throw new DataNotConformException(&quot;Username is necessary!&quot;);</span>
+        }
+<span class="fc" id="L82">    	return tourGuideService.getUserRewards(userName);</span>
+    }
+
+    /**
+     *
+     * @return List&lt;UserLocationDTO&gt;
+     */
+    @RequestMapping(&quot;/getAllCurrentLocations&quot;)
+    public List&lt;UserLocationDTO&gt; getAllCurrentLocations() {
+<span class="fc" id="L91">        List&lt;UserLocationDTO&gt; userLocationDTOS = tourGuideService.getAllCurrentLocations();</span>
+<span class="fc" id="L92">        return userLocationDTOS;</span>
+    }
+
+    /**
+     *
+     * @param userName
+     * @return List&lt;Provider&gt; providers
+     */
+    @RequestMapping(&quot;/getTripDeals&quot;)
+    public List&lt;ProviderDTO&gt; getTripDeals(@RequestParam String userName) {
+
+<span class="fc bfc" id="L103" title="All 2 branches covered.">        if ( userName.length() == 0) {</span>
+<span class="fc" id="L104">            throw new DataNotConformException(&quot;Username is necessary!&quot;);</span>
+        }
+<span class="fc" id="L106">    	return tourGuideService.getTripDeals(userName);</span>
+    }
+
+    /**
+     *
+     * @param userName
+     * @return User
+     */
+    @RequestMapping(&quot;/getUser&quot;)
+    public User getUser(@RequestParam String userName) {
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        if ( userName.length() == 0){</span>
+<span class="fc" id="L117">            throw new DataNotConformException(&quot;Username is necessary!&quot;);</span>
+        }
+<span class="fc" id="L119">    	return tourGuideService.getUser(userName);</span>
+    }
+
+    /**
+     *
+     * @return
+     */
+    @RequestMapping(&quot;/getUsers&quot;)
+    public List&lt;User&gt; getUsers() {
+<span class="fc" id="L128">        List&lt;User&gt; users = tourGuideService.getAllUsers();</span>
+<span class="fc" id="L129">        return users;</span>
+    }
+
+    /**
+     *
+     * @param userName
+     * @return UserPreferencesDTO
+     */
+    @RequestMapping(&quot;/getUserPreferences&quot;)
+    public UserPreferencesDTO getUserPreferences(@RequestParam String userName) {
+<span class="fc bfc" id="L139" title="All 2 branches covered.">        if ( userName.length() == 0){</span>
+<span class="fc" id="L140">            throw new DataNotConformException(&quot;Username is necessary!&quot;);</span>
+        }
+<span class="fc" id="L142">        return  tourGuideService.getUserPreferences(userName);</span>
+    }
+
+    /**
+     *
+     * @param userName
+     * @param userPreferencesDTO
+     * @return UserPreferences
+     */
+    @PutMapping(&quot;/addUserPreferences&quot;)
+    private UserPreferencesDTO addUserPreferences(@Valid @RequestBody UserPreferencesDTO userPreferencesDTO, @RequestParam String userName ) {
+
+<span class="fc bfc" id="L154" title="All 2 branches covered.">        if ( userName.length() == 0){</span>
+<span class="fc" id="L155">            throw new DataNotConformException(&quot;Username is necessary!&quot;);</span>
+        }
+<span class="fc" id="L157">        return tourGuideService.addUserPreferences( userName, userPreferencesDTO);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

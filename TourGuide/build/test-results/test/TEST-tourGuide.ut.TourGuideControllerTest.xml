@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tourGuide.ut.TourGuideControllerTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2021-10-26T14:04:33" hostname="DESKTOP-IV3G66P" time="0.349">
+  <properties/>
+  <testcase name="testGetNearbyAttractionsWitConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.186"/>
+  <testcase name="testGetUsers()" classname="tourGuide.ut.TourGuideControllerTest" time="0.005"/>
+  <testcase name="testGetLocationWithConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.006"/>
+  <testcase name="testIndex()" classname="tourGuide.ut.TourGuideControllerTest" time="0.005"/>
+  <testcase name="testGetUserPreferencesWithNotConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.008"/>
+  <testcase name="testGetUserPreferencesWithConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.007"/>
+  <testcase name="testGetNearbyAttractionsWithBadParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.004"/>
+  <testcase name="testGetLocationWithNotConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.004"/>
+  <testcase name="testAddUserPreferencesWithUserPreferencesDTONull()" classname="tourGuide.ut.TourGuideControllerTest" time="0.01"/>
+  <testcase name="testGetRewardsWithBadParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.006"/>
+  <testcase name="testAddUserPreferencesWithUserNameNotConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.025"/>
+  <testcase name="testGetAllCurrentLocations()" classname="tourGuide.ut.TourGuideControllerTest" time="0.011"/>
+  <testcase name="testAddUserPreferencesWithUserPreferencesDTONameNotConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.009"/>
+  <testcase name="testGetUserWithConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.008"/>
+  <testcase name="testGetUserWithBadParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.007"/>
+  <testcase name="testGetTripDealsWithBadParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.005"/>
+  <testcase name="testGetTripDealsWithGoodParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.008"/>
+  <testcase name="testAddUserPreferencesWithConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.006"/>
+  <testcase name="testGetRewardsWithConformParam()" classname="tourGuide.ut.TourGuideControllerTest" time="0.01"/>
+  <system-out><![CDATA[2021-10-26 16:04:32.742  INFO 17244 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [tourGuide.ut.TourGuideControllerTest], using SpringBootContextLoader
+2021-10-26 16:04:32.743  INFO 17244 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [tourGuide.ut.TourGuideControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-10-26 16:04:32.743  INFO 17244 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tourGuide.ut.TourGuideControllerTest]: TourGuideControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-10-26 16:04:32.764  INFO 17244 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tourGuide.Application for test class tourGuide.ut.TourGuideControllerTest
+2021-10-26 16:04:32.765  INFO 17244 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-10-26 16:04:32.766  INFO 17244 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5751b0fb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71439113, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2c140ca4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@d1ef27d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@57924d4d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3a3485a5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3649df6b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4c3e4ec5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@9038a2a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@17843f02]
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Kyle Field
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Fallingwater
+2021-10-26 16:04:32.928  INFO 17244 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f0e00eb4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: San Diego Zoo
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.6.RELEASE)
+
+2021-10-26 16:04:33.061  INFO 17244 --- [    Test worker] tourGuide.ut.TourGuideControllerTest     : No active profile set, falling back to default profiles: default
+2021-10-26 16:04:33.083  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.186  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Zoo Tampa at Lowry Park
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Bryant-Denny Stadium
+2021-10-26 16:04:33.296  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.400  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.456  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.466  INFO 17244 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-10-26 16:04:33.523  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Franklin Park Zoo
+2021-10-26 16:04:33.617  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.617  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Union Station
+2021-10-26 16:04:33.630  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 13 ms
+2021-10-26 16:04:33.638  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.649  INFO 17244 --- [    Test worker] tourGuide.ut.TourGuideControllerTest     : Started TourGuideControllerTest in 0.882 seconds (JVM running for 82.31)
+2021-10-26 16:04:33.654  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.654  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.655  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.711  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.719  INFO 17244 --- [    Test worker] tourGuide.TourGuideController            :  ---> launch getNearbyAttractions - /getNearbyAttractions - (@RequestParam String userName)
+2021-10-26 16:04:33.822  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.840  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.840  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.841  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.845  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.846  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.846  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2021-10-26 16:04:33.848  INFO 17244 --- [    Test worker] tourGuide.TourGuideController            :  ---> launch getLocation - /getLocation - (@RequestParam String userName)
+2021-10-26 16:04:33.853  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.853  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.854  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.854  INFO 17244 --- [    Test worker] tourGuide.TourGuideController            :  ---> launch index - /
+2021-10-26 16:04:33.858  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.859  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.859  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2021-10-26 16:04:33.860 ERROR 17244 --- [    Test worker] t.exceptions.DataNotFoundException       :   **--> Username is necessary!
+2021-10-26 16:04:33.867  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.867  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.868  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.875  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.875  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.876  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.876  INFO 17244 --- [    Test worker] tourGuide.TourGuideController            :  ---> launch getNearbyAttractions - /getNearbyAttractions - (@RequestParam String userName)
+2021-10-26 16:04:33.876 ERROR 17244 --- [    Test worker] t.exceptions.DataNotFoundException       :   **--> Username is necessary!
+2021-10-26 16:04:33.879  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.879  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.880  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.880  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2021-10-26 16:04:33.881  INFO 17244 --- [    Test worker] tourGuide.TourGuideController            :  ---> launch getLocation - /getLocation - (@RequestParam String userName)
+2021-10-26 16:04:33.881 ERROR 17244 --- [    Test worker] t.exceptions.DataNotFoundException       :   **--> Username is necessary!
+2021-10-26 16:04:33.885  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.885  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.886  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.893  WARN 17244 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: private tourGuide.dto.UserPreferencesDTO tourGuide.TourGuideController.addUserPreferences(tourGuide.dto.UserPreferencesDTO,java.lang.String)]
+2021-10-26 16:04:33.896  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.896  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.897  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.897  INFO 17244 --- [    Test worker] tourGuide.TourGuideController            :  ---> launch getRewards - /getRewards - (@RequestParam String userName)
+2021-10-26 16:04:33.898 ERROR 17244 --- [    Test worker] t.exceptions.DataNotFoundException       :   **--> Username is necessary!
+- User --- addUserReward -
+- User --- addUserReward -> on ajoute le userReward
+- User --- addUserReward -> attrationName: Roger Dean Stadium
+2021-10-26 16:04:33.904  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.904  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.905  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.925 ERROR 17244 --- [    Test worker] t.exceptions.DataNotFoundException       :   **--> Username is necessary!
+2021-10-26 16:04:33.929  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.929  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.931  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2021-10-26 16:04:33.942  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.942  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.943  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.948  WARN 17244 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in private tourGuide.dto.UserPreferencesDTO tourGuide.TourGuideController.addUserPreferences(tourGuide.dto.UserPreferencesDTO,java.lang.String) with 3 errors: [Field error in object 'userPreferencesDTO' on field 'attractionProximity': rejected value [-300]; codes [Min.userPreferencesDTO.attractionProximity,Min.attractionProximity,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userPreferencesDTO.attractionProximity,attractionProximity]; arguments []; default message [attractionProximity],0]; default message [must be greater than or equal to 0]] [Field error in object 'userPreferencesDTO' on field 'lowerPricePoint': rejected value [-100]; codes [Min.userPreferencesDTO.lowerPricePoint,Min.lowerPricePoint,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userPreferencesDTO.lowerPricePoint,lowerPricePoint]; arguments []; default message [lowerPricePoint],0]; default message [must be greater than or equal to 0]] [Field error in object 'userPreferencesDTO' on field 'highPricePoint': rejected value [-300]; codes [Min.userPreferencesDTO.highPricePoint,Min.highPricePoint,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userPreferencesDTO.highPricePoint,highPricePoint]; arguments []; default message [highPricePoint],1]; default message [must be greater than or equal to 0]] ]
+2021-10-26 16:04:33.952  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.952  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.953  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.959  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+2021-10-26 16:04:33.963  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.963  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.964  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.966 ERROR 17244 --- [    Test worker] t.exceptions.DataNotFoundException       :   **--> Username is necessary!
+2021-10-26 16:04:33.971  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.971  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.972  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.973 ERROR 17244 --- [    Test worker] t.exceptions.DataNotFoundException       :   **--> Username is necessary!
+2021-10-26 16:04:33.977  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.977  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.978  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.985  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.985  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.986  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-10-26 16:04:33.992  INFO 17244 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-10-26 16:04:33.992  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-10-26 16:04:33.992  INFO 17244 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2021-10-26 16:04:33.993  INFO 17244 --- [    Test worker] tourGuide.TourGuideController            :  ---> launch getRewards - /getRewards - (@RequestParam String userName)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

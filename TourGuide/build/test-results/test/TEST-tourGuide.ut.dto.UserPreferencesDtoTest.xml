@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tourGuide.ut.dto.UserPreferencesDtoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-10-26T14:04:32" hostname="DESKTOP-IV3G66P" time="0.081">
+  <properties/>
+  <testcase name="bidListDtoAllPasramsGoodTest()" classname="tourGuide.ut.dto.UserPreferencesDtoTest" time="0.075"/>
+  <testcase name="bidListDtoAllNotConformParamsEmptyTest()" classname="tourGuide.ut.dto.UserPreferencesDtoTest" time="0.005"/>
+  <testcase name="bidListDtoAllPasramsEmptyTest()" classname="tourGuide.ut.dto.UserPreferencesDtoTest" time="0.0"/>
+  <system-out><![CDATA[2021-10-26 16:04:32.713  INFO 17244 --- [pool-3-thread-1] tourGuide.service.RewardsService         :  ----> Launch calculateRewards
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

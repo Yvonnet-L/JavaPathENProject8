@@ -1,9 +1,9 @@
 package tourGuide.user;
 
+import org.javamoney.moneta.Money;
+
 import javax.money.CurrencyUnit;
 import javax.money.Monetary;
-
-import org.javamoney.moneta.Money;
 
 
 public class UserPreferences {
@@ -19,7 +19,36 @@ public class UserPreferences {
 	
 	public UserPreferences() {
 	}
-	
+
+	public UserPreferences(int tripDuration, int ticketQuantity, int numberOfAdults, int numberOfChildren) {
+		this.tripDuration = tripDuration;
+		this.ticketQuantity = ticketQuantity;
+		this.numberOfAdults = numberOfAdults;
+		this.numberOfChildren = numberOfChildren;
+	}
+
+	public UserPreferences(int attractionProximity, Money lowerPricePoint, Money highPricePoint, int tripDuration,
+						   int ticketQuantity, int numberOfAdults, int numberOfChildren) {
+		this.attractionProximity = attractionProximity;
+		this.lowerPricePoint = lowerPricePoint;
+		this.highPricePoint = highPricePoint;
+		this.tripDuration = tripDuration;
+		this.ticketQuantity = ticketQuantity;
+		this.numberOfAdults = numberOfAdults;
+		this.numberOfChildren = numberOfChildren;
+	}
+
+	public UserPreferences(int attractionProximity, CurrencyUnit currency, Money lowerPricePoint, Money highPricePoint, int tripDuration, int ticketQuantity, int numberOfAdults, int numberOfChildren) {
+		this.attractionProximity = attractionProximity;
+		this.currency = Monetary.getCurrency("USD");;
+		this.lowerPricePoint = lowerPricePoint;
+		this.highPricePoint = highPricePoint;
+		this.tripDuration = tripDuration;
+		this.ticketQuantity = ticketQuantity;
+		this.numberOfAdults = numberOfAdults;
+		this.numberOfChildren = numberOfChildren;
+	}
+
 	public void setAttractionProximity(int attractionProximity) {
 		this.attractionProximity = attractionProximity;
 	}

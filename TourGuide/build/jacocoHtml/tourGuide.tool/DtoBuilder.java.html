@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DtoBuilder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TourGuide</a> &gt; <a href="index.source.html" class="el_package">tourGuide.tool</a> &gt; <span class="el_source">DtoBuilder.java</span></div><h1>DtoBuilder.java</h1><pre class="source lang-java linenums">package tourGuide.tool;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Component;
+import tourGuide.beans.Provider;
+import tourGuide.dto.ProviderDTO;
+import tourGuide.dto.UserPreferencesDTO;
+import tourGuide.dto.UserRewardDTO;
+import tourGuide.user.UserPreferences;
+import tourGuide.user.UserReward;
+
+
+/**
+ * This class allows the construction of a DTO from a Model
+ */
+@Component
+<span class="fc" id="L18">public class DtoBuilder {</span>
+
+<span class="fc" id="L20">    private static Logger logger = LogManager.getLogger(DtoBuilder.class);</span>
+
+
+    /**----------------------UserPreferencesDTO--------------------------------------------------------------------------
+     *
+     * @param up UserPreferences
+     * @return UserPreferencesDTO
+     */
+    public UserPreferencesDTO buildUserPreferencesDTO(final UserPreferences up) {
+<span class="fc" id="L29">        logger.info( &quot; ---&gt; Launch buildUserPreferencesDTO&quot;);</span>
+<span class="fc" id="L30">        return new UserPreferencesDTO(up.getAttractionProximity(),up.getLowerPricePoint().getNumber().intValue(),</span>
+<span class="fc" id="L31">                                        up.getHighPricePoint().getNumber().intValue(), up.getTripDuration(),</span>
+<span class="fc" id="L32">                                        up.getTicketQuantity(), up.getNumberOfAdults(), up.getNumberOfChildren());</span>
+    }
+
+    /**----------------------UserRewardDTO--------------------------------------------------------------------------
+     *
+     * @param ur UserReward
+     * @return UserRewardDTO
+     */
+    public UserRewardDTO buildUserRewardDTO(final UserReward ur){
+<span class="fc" id="L41">        logger.info( &quot; ---&gt; Launch buildUserRewardDTO&quot;);</span>
+<span class="pc bpc" id="L42" title="1 of 2 branches missed.">        if(ur!=null) {</span>
+<span class="fc" id="L43">            return new UserRewardDTO(ur.getVisitedLocation(), ur.getAttraction(), ur.getRewardPoints());</span>
+        }else{
+<span class="nc" id="L45">            return null;</span>
+        }
+    }
+
+    /**----------------------ProviderDTO-------------------------------------------------------------------------------
+     *
+     * @param provider
+     * @return
+     */
+    public ProviderDTO buildProviderDTO(final Provider provider){
+<span class="fc" id="L55">        logger.info( &quot; ---&gt; Launch buildProviderDTO&quot;);</span>
+<span class="fc" id="L56">        return new ProviderDTO( provider.name, provider.price, provider.tripId );</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
