@@ -5,33 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d42dcaf4-f4fd-44b0-90bd-6808a1d0746c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/JavaPathENProject8.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TourGuide Architectural Overview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TourGuide.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/TourGuideController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/TourGuideController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/beans/Attraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/beans/Attraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/beans/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/beans/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/beans/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/beans/Provider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/beans/VisitedLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/beans/VisitedLocation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/dto/AttractionNearDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/dto/AttractionNearDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/dto/LocationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/dto/LocationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/dto/UserLocationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/dto/UserLocationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/service/RewardsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/service/RewardsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/service/TourGuideService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/service/TourGuideService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/service/TourGuideService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/service/TourGuideService$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/service/TourGuideService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/service/TourGuideService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuide/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuide/user/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/tourGuide-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/tourGuide-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuide/proxies/MicroserviceGpsUtilProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuide/proxies/MicroserviceGpsUtilProxy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
