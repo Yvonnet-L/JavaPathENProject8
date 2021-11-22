@@ -19,20 +19,18 @@ RewardsCentral).
 You will find below a diagram detailing their connection
 ## Prerequisites
 ### Technologies
-- Spring Boot
-- Spring MVC
-- Spring Data JPA
-- Hibernate
+- Java
+- Docker
 
 ### Installing
 Install Java:
 * https://www.oracle.com/fr/java/technologies/javase-downloads.html
 
-Install Gradle:
-* https://gradle.org/
-
 Install Docker:
 * https://www.docker.com/products/docker-desktop
+
+Then you can test the endpoints with Postman for example.
+* https://www.postman.com/downloads/
 
 ## Run the application
 
@@ -43,8 +41,7 @@ you to launch the Dockerfile image construction diagrams
 * 2nd step, build the Docker-compose.yml of TourGuide with the command that creates and start containers
   * $ docker-compose up
   
-Then you can test the endpoints with Postman for example.
-  * https://www.postman.com/downloads/
+
   
 
 ## Modelization
