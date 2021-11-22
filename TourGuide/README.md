@@ -19,12 +19,16 @@ RewardsCentral).
 You will find below a diagram detailing their connection
 ## Prerequisites
 ### Technologies
-- Java
+- Java 1.8 JDK
+- Gradle 2.1.6
 - Docker
 
 ### Installing
 Install Java:
 * https://www.oracle.com/fr/java/technologies/javase-downloads.html
+
+Install Gradle
+* https://gradle.org/install/
 
 Install Docker:
 * https://www.docker.com/products/docker-desktop
@@ -34,21 +38,30 @@ Then you can test the endpoints with Postman for example.
 
 ## Run the application
 
-Once the project is in your favorite IDE. To make it work on Docker, since it has been installed beforehand, there are 2 steps.
-* Build each micro-services, with gradle and run the command build under the root of each micro-sercices, this allows
-you to launch the Dockerfile image construction diagrams 
-  * $ docker build -t NAME_OF_YOUR_IMAGE .
-* 2nd step, build the Docker-compose.yml of TourGuide with the command that creates and start containers
+Once the project is in your preferred IDE, before launching it, you will obviously have to have installed
+the prerequisites listed above.
+To run the application, you will first have to go to each root directory of the 4 micro-services to launch 2
+commands with Git Bash for example:
+* Build each micro-services, with gradle:
+  ``` 
+  * $ ./gradlew build
+  ``` 
+* Then you will need to build each microservices docker image using the command
+  ``` 
+  * $ docker build -t NAME_OF_YOUR_IMAGE . 
+  * ex: $ docker build -t ms-gpsUtil .
+    (Be careful not to forget the full point at the end)
+  ``` 
+* Once all the docker images are built, all you have to do is build the docker-compose, which will be launched 
+ automatically, using the command
+   ``` 
   * $ docker-compose up
+  ``` 
+  
+* All you have to do is test the application using Postman through the endPoints listed just below.
   
 
-  
 
-## Modelization
-###  Class Diagram
-![Model](ShemaModel.jpg)
-###  TourGuide Architectural Overview
-![TourGuide Architectural Overview](TourGuide%20Architectural%20Overview.png)
 
 ## ENDPOINTS
 ``` 
@@ -100,3 +113,10 @@ UpDate of user's references
           "numberOfAdults": 2,
           "numberOfChildren": 1
           }
+
+
+## Modelization
+###  Class Diagram
+![Model](ShemaModel.jpg)
+###  TourGuide Architectural Overview
+![TourGuide Architectural Overview](TourGuide%20Architectural%20Overview.png)
